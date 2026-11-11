@@ -1,5 +1,5 @@
 /* ==========================================================================
-   arturomartin.au — shared styles
+   jorgemartin.design — shared styles
    Sections: 1 Fonts · 2 Tokens · 3 Base · 4 Layout · 5 Header · 6 Footer
              7 Components · 8 Home · 9 Latest work · 10 About · 11 Blog
              12 Contact · 13 Case studies & articles · 14 Responsive
@@ -119,9 +119,9 @@ button { font: inherit; color: inherit; background: none; border: 0; padding: 0;
 .tagline {
   display: flex; align-items: center; gap: 10px;
   font-size: 14px; line-height: 1.4; font-weight: 300; letter-spacing: 0;
-  color: var(--text-2);
+  color: var(--accent, var(--text-2));
 }
-.tagline::after { content: ""; flex: 1; height: 1px; background: var(--line); }
+.tagline::after { content: ""; flex: 1; height: 1px; background: currentColor; opacity: 0.4; }
 .tagline--reverse::after { order: -1; }
 
 /* 5. Header -------------------------------------------------------------- */
@@ -189,18 +189,25 @@ a:hover > .icon { background: #fff; }
   position: relative; overflow: hidden;
   display: inline-flex; align-items: center; justify-content: center; gap: 8px;
   width: 300px; max-width: 100%; height: 60px; padding: 16px 24px 16px 36px;
-  border: 1px solid var(--border-card); border-radius: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.12); border-radius: 8px;
   background: var(--surface);
   color: #fff; font-size: 16px; line-height: 28px;
+  transition: border-color 0.2s;
 }
 .btn::before { /* glow along the bottom edge */
   content: ""; position: absolute; inset: 0; border-radius: inherit;
   background: radial-gradient(41% 25% at 50% 100%, #fff 0%, rgba(255, 255, 255, 0) 100%);
-  opacity: 0.35; transition: opacity 0.3s;
+  opacity: 0.22; transition: opacity 0.3s;
 }
-.btn:hover::before { opacity: 0.75; }
+.btn:hover::before, .btn:focus-visible::before, .btn:active::before { opacity: 1; }
+.btn:hover, .btn:focus-visible, .btn:active { border-color: #fff; }
 .btn > * { position: relative; }
-.btn svg { width: 22px; height: 22px; fill: currentColor; }
+.btn svg {
+  width: 22px; height: 22px; fill: currentColor;
+  opacity: 0; transform: translateX(-4px);
+  transition: opacity 0.2s, transform 0.2s;
+}
+.btn:hover svg, .btn:focus-visible svg, .btn:active svg { opacity: 1; transform: none; }
 .btn--block { width: 100%; }
 
 /* Call to action block (bottom of every page) */
@@ -260,16 +267,16 @@ a:hover > .icon { background: #fff; }
   position: relative; overflow: hidden;
   min-height: min(100vh, 900px); height: 100vh; max-height: 1100px;
   display: flex; flex-direction: column; justify-content: flex-end; align-items: center; gap: 44px;
-  padding: 160px 40px 80px;
+  padding: 160px 40px 40px;
   margin-top: -92px; /* sits under the fixed header */
   isolation: isolate;
 }
-.hero::after { content: ""; position: absolute; inset: 0; z-index: -1; background: rgba(0, 0, 0, 0.45); }
+.hero::after { content: ""; position: absolute; inset: 0; z-index: -1; background: linear-gradient(to top, rgba(0, 0, 0, 0.75) 0%, rgba(0, 0, 0, 0.35) 40%, rgba(0, 0, 0, 0) 70%); }
 .hero__video { position: absolute; inset: 0; z-index: -2; width: 100%; height: 100%; object-fit: cover; }
 .hero h1 {
   max-width: 1224px; text-align: center;
-  font-size: clamp(30px, 3.9vw, 56px); line-height: 1.2; font-weight: 500; letter-spacing: -0.02em;
-  color: var(--heading);
+  font-size: clamp(30px, 3.1vw, 44px); line-height: 1.2; font-weight: 500; letter-spacing: 0;
+  color: #fff;
 }
 .hero__scroll { display: flex; flex-direction: column; align-items: center; gap: 5px; padding: 7px; font-size: 16px; line-height: 1.6; letter-spacing: -0.32px; }
 .hero__scroll svg { width: 25px; height: 25px; fill: var(--text-2); animation: nudge 1.8s ease-in-out infinite; }
@@ -315,9 +322,19 @@ a:hover > .icon { background: #fff; }
 
 /* 10. About --------------------------------------------------------------- */
 .lead {
-  font-size: clamp(26px, 3.1vw, 44px); line-height: 1.35; font-weight: 700; letter-spacing: -0.02em;
-  color: #e4e9f2;
+  font-size: clamp(30px, 3.1vw, 44px); line-height: 1.2; font-weight: 500; letter-spacing: 0;
+  text-align: center; color: #e4e9f2;
 }
+/* Content pages (non-case-study): tighter above-the-fold */
+main.page:has(.lead),
+main.page:has(.contact-grid),
+main.page:has(.work-grid),
+main.page:has(.post-feature) { padding-top: 128px; gap: 96px; }
+
+main.page:has(.lead) .page-title,
+main.page:has(.contact-grid) .page-title,
+main.page:has(.work-grid) .page-title,
+main.page:has(.post-feature) .page-title { font-size: clamp(44px, 5vw, 72px); }
 .prose-block { display: flex; flex-direction: column; gap: 24px; }
 .prose-block p { font-size: 18px; line-height: 1.75; }
 .about-image img { width: 100%; height: auto; }
@@ -369,13 +386,13 @@ a:hover .post-title { color: #fff; }
 .field { position: relative; display: flex; flex-direction: column; gap: 4px; }
 .field span { font-size: 14px; line-height: 22px; font-weight: 500; letter-spacing: -0.14px; }
 .field input, .field textarea {
-  width: 100%; padding: 12px; border: 1px solid transparent; border-radius: 8px;
-  background: rgba(0, 0, 0, 0.5); color: var(--text-2);
+  width: 100%; padding: 12px; border: 1px solid rgba(255, 255, 255, 0.18); border-radius: 8px;
+  background: rgba(0, 0, 0, 0.5); color: rgba(255, 255, 255, 0.92);
   font: 14px/24px var(--font-sans);
 }
 .field textarea { min-height: 100px; resize: vertical; }
-.field input::placeholder, .field textarea::placeholder { color: var(--text-3); }
-.field input:focus, .field textarea:focus { outline: none; border-color: var(--line); }
+.field input::placeholder, .field textarea::placeholder { color: rgba(255, 255, 255, 0.45); }
+.field input:focus, .field textarea:focus { outline: none; border-color: #fff; box-shadow: inset 0 0 0 1px #fff; }
 .form-status { font-size: 14px; line-height: 22px; text-align: center; color: var(--text-2); }
 .form-status[data-state="success"] { color: #53caf5; }
 .form-status[data-state="error"] { color: #ff7a93; }
@@ -386,7 +403,13 @@ a:hover .post-title { color: #fff; }
 .social-item__icon .icon { width: 36px; height: 36px; background: var(--text-2); }
 .social-item__name { font-size: 18px; line-height: 1.75; color: var(--text-2); transition: color 0.2s; }
 .social-item:hover .social-item__name { color: #fff; }
+.social-item:hover .icon { background: #fff; }
 .social-item__handle { font-size: 14px; line-height: 1.4; font-weight: 300; letter-spacing: 0; color: var(--text-3); }
+
+/* Contact-specific: even tighter since it's only 3 blocks */
+main.page:has(.contact-grid) { gap: 40px; }
+main.page:has(.contact-grid) .contact-intro { max-width: 632px; margin: 0; text-align: left; font-size: clamp(18px, 1.8vw, 24px); line-height: 1.5; }
+main.page:has(.contact-grid) .social-list { flex: 0 0 auto; gap: 36px; }
 
 /* 13. Case studies & articles ---------------------------------------------- */
 /* Two columns: long-form text plus a sticky list of facts. Add --flip to put the facts on the left. */
@@ -483,6 +506,13 @@ figcaption { margin-top: 8px; font-size: 13px; line-height: 1.2; font-style: ita
   .contact-grid { gap: 40px; }
   .social-list { flex-basis: 280px; }
   .project-stack { gap: 120px; }
+
+  /* Content pages: scale trimmed above-the-fold down for tablet */
+  main.page:has(.lead),
+  main.page:has(.contact-grid),
+  main.page:has(.work-grid),
+  main.page:has(.post-feature) { padding-top: 96px; gap: 72px; }
+  main.page:has(.contact-grid) { gap: 32px; }
 }
 
 /* Phone */
@@ -546,6 +576,14 @@ figcaption { margin-top: 8px; font-size: 13px; line-height: 1.2; font-style: ita
   .contact-grid { flex-direction: column; }
   .form-card { flex: none; width: 100%; padding: 20px; }
   .social-list { flex: none; gap: 28px; }
+
+  /* Content pages: scale trimmed above-the-fold down for phone */
+  main.page:has(.lead),
+  main.page:has(.contact-grid),
+  main.page:has(.work-grid),
+  main.page:has(.post-feature) { padding-top: 80px; gap: 56px; }
+  main.page:has(.contact-grid) { gap: 32px; }
+  main.page:has(.contact-grid) .contact-intro { max-width: 100%; }
 
   .site-footer { padding: 72px 0 48px; }
   .site-footer__row { grid-template-columns: 1fr; gap: 28px; }

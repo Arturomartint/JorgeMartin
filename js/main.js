@@ -1,4 +1,4 @@
-/* arturomartin.au — small progressive enhancements. The site works without this file. */
+/* jorgemartin.design — small progressive enhancements. The site works without this file. */
 
 // 1. Scroll progress line under the header
 const progress = document.querySelector('.site-header__progress');
