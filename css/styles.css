@@ -128,16 +128,16 @@ button { font: inherit; color: inherit; background: none; border: 0; padding: 0;
 .site-header {
   position: fixed; inset: 0 0 auto 0; z-index: 50;
   height: var(--header-h);
-  background: rgba(0, 0, 0, 0.5);
-  -webkit-backdrop-filter: blur(8px);
-  backdrop-filter: blur(8px);
+  background: rgba(10, 12, 18, 0.35);
+  -webkit-backdrop-filter: blur(14px) saturate(180%);
+  backdrop-filter: blur(14px) saturate(180%);
 }
 .site-header__inner {
   display: flex; align-items: center; justify-content: space-between; gap: 36px;
   width: min(var(--content), 100% - 2 * var(--gutter));
   height: 100%;
   margin: 0 auto;
-  border-bottom: 1px solid var(--line);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
   position: relative;
 }
 /* scroll progress, driven by js/main.js */
@@ -522,18 +522,43 @@ figcaption { margin-top: 8px; font-size: 13px; line-height: 1.2; font-style: ita
   .page { padding-top: 88px; }
   .aim::before, .aim::after { display: none; }
 
-  /* header: links collapse behind a Menu button */
-  .nav-toggle { display: block; font-size: 16px; color: #fff; padding: 8px 0; }
-  .site-header .nav {
-    position: absolute; top: var(--header-h); left: calc(var(--gutter) * -1); right: calc(var(--gutter) * -1);
-    display: none; flex-direction: column; align-items: flex-start; gap: 20px;
-    padding: 24px var(--gutter) 32px;
-    background: #000;
-    font-size: 24px;
+  /* Floating glass pill (top, iOS-style) */
+  .site-header {
+    inset: calc(env(safe-area-inset-top, 0px) + 12px) 16px auto 16px;
+    height: auto;
+    border-radius: 999px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
   }
-  .site-header .nav.is-open { display: flex; }
+  .site-header__inner {
+    width: 100%; padding: 8px 12px 8px 16px; gap: 12px;
+    border-bottom: none;
+  }
+  .site-header__progress { display: none; }
+  .brand span { display: none; }
+  .brand img { width: 28px; height: 28px; }
+  .nav-toggle { display: none; }
+  .site-header .nav {
+    display: flex; flex-direction: row; align-items: center; gap: 2px;
+  }
+  .site-header .nav a {
+    font-size: 0; padding: 10px; border-radius: 12px;
+    display: flex; align-items: center; justify-content: center;
+    color: var(--text-2); transition: color 0.2s, background 0.2s;
+  }
+  .site-header .nav a::before {
+    content: ""; display: block; width: 22px; height: 22px;
+    background: currentColor;
+    -webkit-mask: var(--icon) center / contain no-repeat;
+    mask: var(--icon) center / contain no-repeat;
+  }
+  .site-header .nav a[href*="latest-work"] { --icon: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><path d='M16 20V4a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16'/><rect width='20' height='14' x='2' y='6' rx='2'/></svg>"); }
+  .site-header .nav a[href*="about"]       { --icon: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><path d='M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2'/><circle cx='12' cy='7' r='4'/></svg>"); }
+  .site-header .nav a[href*="blog"]        { --icon: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><path d='M12 7v14'/><path d='M3 18a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h5a4 4 0 0 1 4 4 4 4 0 0 1 4-4h5a1 1 0 0 1 1 1v13a1 1 0 0 1-1 1h-6a3 3 0 0 0-3 3 3 3 0 0 0-3-3z'/></svg>"); }
+  .site-header .nav a[href*="contact"]     { --icon: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><rect width='20' height='16' x='2' y='4' rx='2'/><path d='m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7'/></svg>"); }
+  .site-header .nav a[aria-current="page"] { background: rgba(255, 255, 255, 0.08); color: #fff; }
 
-  .hero { margin-top: -88px; padding: 120px 20px 48px; }
+  .hero { margin-top: 0; padding: 48px 20px 48px; }
   .project-stack { gap: 40px; }
   .project-stack > li { position: static; }
   .project-card { aspect-ratio: 3 / 4; }
