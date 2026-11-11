@@ -532,27 +532,31 @@ figcaption { margin-top: 8px; font-size: 13px; line-height: 1.2; font-style: ita
     -webkit-backdrop-filter: blur(24px) saturate(200%);
     backdrop-filter: blur(24px) saturate(200%);
     box-shadow:
-      0 18px 40px rgba(0, 0, 0, 0.45),
-      0 2px 8px rgba(0, 0, 0, 0.3),
-      inset 0 1px 0 rgba(255, 255, 255, 0.38),
-      inset 0 -1px 0 rgba(0, 0, 0, 0.25);
+      0 8px 24px rgba(0, 0, 0, 0.55),
+      0 2px 6px rgba(0, 0, 0, 0.45),
+      inset 0 1px 0 rgba(255, 255, 255, 0.4),
+      inset 0 -1px 0 rgba(0, 0, 0, 0.3);
     overflow: hidden;
   }
   .site-header::before {
     content: "";
-    position: absolute; inset: 0 0 auto 0; height: 50%;
+    position: absolute; inset: 0 0 auto 0; height: 60%;
     border-radius: 999px 999px 0 0;
-    background: linear-gradient(to bottom, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0.22), rgba(255, 255, 255, 0));
     pointer-events: none;
   }
   .site-header__inner {
-    width: 100%; padding: 10px 14px; gap: 10px;
+    width: 100%; padding: 6px; gap: 4px;
     border-bottom: none;
     position: relative; z-index: 1;
   }
   .site-header__progress { display: none; }
+  .brand {
+    padding: 12px; border-radius: 14px;
+    transition: background 0.2s;
+  }
   .brand span { display: none; }
-  .brand img { width: 28px; height: 28px; }
+  .brand img { width: 22px; height: 22px; }
   .nav-toggle { display: none; }
   .site-header .nav {
     display: flex; flex-direction: row; align-items: center; gap: 4px;
