@@ -1,0 +1,6 @@
+# Not part of the published site
+_source/
+download.py
+__pycache__/
+assets/_image_report.json
+.DS_Store

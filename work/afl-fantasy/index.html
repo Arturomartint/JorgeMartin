@@ -1,0 +1,298 @@
+<!doctype html>
+<html lang="en-AU">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Jorge Martin · Senior Product Designer · Melbourne</title>
+  <meta name="description" content="Senior Product Designer with 5+ years across sports, SaaS, and regulated platforms. Design systems, AFL Fantasy, FIFA+, TAB, and more. Based in Melbourne.">
+  <link rel="canonical" href="https://jorgemartin.design/work/afl-fantasy/">
+
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://jorgemartin.design/work/afl-fantasy/">
+  <meta property="og:title" content="Jorge Martin · Senior Product Designer · Melbourne">
+  <meta property="og:description" content="Senior Product Designer with 5+ years across sports, SaaS, and regulated platforms. Design systems, AFL Fantasy, FIFA+, TAB, and more. Based in Melbourne.">
+  <meta property="og:image" content="https://jorgemartin.design/assets/images/h6qqPL3QZ8wPgKcwJmxTs7duzrc.webp">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <link rel="icon" href="../../assets/images/Y2CQSM1bWsq7bWcdmqtoUGIrQyg.png" media="(prefers-color-scheme: light)">
+  <link rel="icon" href="../../assets/images/NkMLTrWsmjRmszUXBF07g3mEE.png" media="(prefers-color-scheme: dark)">
+  <link rel="apple-touch-icon" href="../../assets/images/C7DCQwpNZEM6WE1IkG9xE67PM9Q.png">
+
+  <link rel="preload" href="../../assets/fonts/Inter-Variable.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="../../css/styles.css">
+  <script src="../../js/main.js" defer></script>
+</head>
+<body>
+
+  <!-- ===== Header ===== -->
+  <header class="site-header">
+    <div class="site-header__inner">
+      <a class="brand" href="../../">
+        <img src="../../assets/icons/logo.svg" alt="" width="35" height="35">
+        <span>Jorge Martin</span>
+      </a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">Menu</button>
+      <nav class="nav" id="site-nav" aria-label="Main">
+        <a href="../../latest-work/" aria-current="page">Latest Work</a>
+        <a href="../../about/">About</a>
+        <a href="../../blog/">Blog</a>
+        <a href="../../contact/">Contact</a>
+      </nav>
+      <span class="site-header__progress" aria-hidden="true"></span>
+    </div>
+  </header>
+
+  <main class="page" style="--accent: #53caf5; --tile: rgba(40, 92, 112, 0.9)">
+    <h1 class="page-title aim">AFL Fantasy</h1>
+
+    <!-- ===== Overview ===== -->
+    <section class="case-section">
+      <div class="prose">
+      <h2>Overview</h2>
+      <p>AFL Fantasy is one of Australia's most-played fantasy sports products, a free-to-play platform where 300,000+ fans draft, trade, and compete across the AFL season. When I joined Genius Sports, the product was already beloved. The problem wasn't what it did. It was how it was built underneath.</p>
+      <p>Years of rapid feature shipping had left the product structurally fragile: inconsistent components, duplicated patterns, unclear design logic, and a handoff process that was slowing the engineering team down as much as it was frustrating us. The codebase and the design system had drifted so far apart that every new feature required rediscovering the rules.</p>
+      <p>My job was to change that, without breaking what users already loved.</p>
+      <h3>Problem<strong>:</strong></h3>
+      <blockquote><p><em>"We're spending more time maintaining than we are shipping."</em></p></blockquote>
+      <p>That was the honest assessment when I mapped the state of the product. Specifically:</p>
+      <ul>
+        <li><strong>Design inconsistency</strong>: similar UI patterns were designed differently across web, iOS, and Android, creating a fragmented experience across platforms</li>
+        <li><strong>Component sprawl</strong>: there was no single source of truth; similar buttons, cards, and inputs existed in multiple variations with no clear rationale</li>
+        <li><strong>Slow handoff</strong>: engineers were regularly re-interpreting designs because specifications were incomplete or contradicted existing patterns</li>
+        <li><strong>High cognitive load</strong>: for users, core flows like team selection, trades, and scoring views had accumulated friction over time, making the experience harder to navigate than it needed to be</li>
+      </ul>
+      <p>The design debt wasn't just a technical problem. It was a user problem.</p>
+      <figure>
+        <img src="../../assets/images/EbWGwa9dx9PvMU4mMQhuXTTmkk.webp" alt="AFL Fantasy Heuristics - Before vs After" width="1920" height="1080" loading="lazy" decoding="async">
+        <figcaption>AFL Fantasy Heuristics - Before vs After</figcaption>
+      </figure>
+      <h3>My Role:</h3>
+      <p>I led the end-to-end product design effort, from discovery through to delivery, working in close partnership with the product manager, engineering lead and iOS engineers. My responsibilities covered:</p>
+      <ul>
+        <li>Researching heuristics, competitors, and user journeys.</li>
+        <li>Run a series of interviews with real users, to understand usability patterns</li>
+        <li>Auditing the existing product and mapping design debt across all platforms</li>
+        <li>Defining the component and pattern strategy</li>
+        <li>Producing and iterating the branding rationale</li>
+        <li>Conducting user research and usability testing to validate design decisions</li>
+        <li>Designing all flows from wireframe through high-fidelity across Web, iOS, and Android</li>
+        <li>Building and maintaining the design system in Figma</li>
+        <li>Leading design handoff with the engineering team</li>
+        <li>Running design and code audits previous and after launching</li>
+      </ul>
+      </div>
+      <dl class="facts">
+        <div><dt>Role</dt><dd>Senior Product Designer</dd></div>
+        <div><dt>Timeline</dt><dd>2024-2026</dd></div>
+        <div><dt>Platforms</dt><dd>iOS, Android, Web</dd></div>
+        <div><dt>Company</dt><dd>Genius Sports, Telstra</dd></div>
+      </dl>
+    </section>
+
+    <!-- ===== Research, design, system ===== -->
+    <section class="case-section case-section--flip">
+      <div class="prose">
+      <h2>Research &amp; Discovery</h2>
+      <p>Before touching a single screen, I spent time understanding the product from two angles: the user experience and the system underneath.</p>
+      <p><strong>Design audit</strong> I catalogued every component in the product: buttons, cards, navigation patterns, form inputs, data visualisations, and documented every inconsistency. The audit revealed that roughly half of the design patterns in the product were either duplicated, inconsistently applied, or undocumented. That became the benchmark: ~50% design debt to resolve.</p>
+      <p><strong>User research</strong> I ran usability testing sessions with existing AFL Fantasy users, focusing on the three highest-traffic flows: team selection, trade management, and live scoring. Across sessions, three consistent themes emerged:</p>
+      <ol>
+        <li><strong>Orientation</strong>: users frequently lost track of where they were in multi-step flows</li>
+        <li><strong>Confidence</strong>: users hesitated before confirming trades and selections, unsure of the consequences</li>
+        <li><strong>Speed</strong>: power users wanted to move faster; the UI was getting in their way</li>
+      </ol>
+      <p><strong>Data review</strong> Working with the product manager, I reviewed analytics across the key flows, where users dropped off, which features had low engagement relative to their prominence, and where support tickets were clustering. The scoring and trade flows stood out clearly as areas where user behaviour and design intent had misaligned.</p>
+      <figure>
+        <img src="../../assets/images/dflHjTns4v7q5diai29wOlM.webp" alt="AFL Fantasy - Competitor Analysis" width="2400" height="1264" loading="lazy" decoding="async">
+        <figcaption>AFL Fantasy - Competitor Analysis</figcaption>
+      </figure>
+      <h3>Key Insights:</h3>
+      <p>Three insights shaped everything that followed:</p>
+      <p><strong>1. The product needed a shared language, not just a visual refresh.</strong> The inconsistency wasn't aesthetic, it was structural. A visual refresh would fix how it looked; what we needed was a systematic approach that would fix how it worked, for users and for the team building it.</p>
+      <p><strong>2. Power users are the product's heartbeat.</strong> AFL Fantasy has a core of deeply engaged fans who return every week across a 23-round season. Design decisions that slowed them down, extra taps, confirmation screens, unclear hierarchy, had an outsized impact on retention. Speed and clarity were non-negotiable.</p>
+      <p><strong>3. Consistency would compound over time.</strong> Every hour spent debating component choices in design was an hour not spent on features. By resolving the design language upfront, we were investing in every future sprint, not just this one.</p>
+      <figure>
+        <img src="../../assets/images/Z8iDQLhOtIUKk7cKqpI8oU5ffY.webp" alt="AFL Draft - Flow explorations" width="2400" height="1264" loading="lazy" decoding="async">
+        <figcaption>AFL Draft - Flow explorations</figcaption>
+      </figure>
+      <h2>Design Approach</h2>
+      <h6>Information Architecture</h6>
+      <p>The first structural decision was to simplify navigation. The existing architecture asked users to make too many choices too early. I consolidated the core flows: My Team, Trades, Scores, Leagues, into a cleaner primary navigation, reducing the cognitive overhead of getting from intent to action.</p>
+      <figure>
+        <img src="../../assets/images/RyKHlECk31wDnB34vS2tczf3Mo.webp" alt="AFL Fantasy - Trade Flow" width="2400" height="1264" loading="lazy" decoding="async">
+        <figcaption>AFL Fantasy - Trade Flow</figcaption>
+      </figure>
+      <h6>Progressive disclosure</h6>
+      <p>For complex flows like trades, I introduced progressive disclosure: surface the essential information first, reveal detail on demand. This reduced the perceived complexity of the trade flow significantly, while preserving full functionality for users who wanted it.</p>
+      <figure style="max-width: 300px">
+        <video src="../../assets/video/K9sY55CgySZGaGQlLaE60w9Xk0.mp4" aria-label="AFL Fantasy - Trade patterns" autoplay muted loop playsinline preload="metadata"></video>
+        <figcaption>AFL Fantasy - Trade patterns</figcaption>
+      </figure>
+      <h6><br></h6>
+      <h6>Responsive-first, mobile-led</h6>
+      <p>Given that the majority of usage happened on mobile during live matches, I designed mobile-first and scaled up, rather than the reverse. This forced earlier decisions about hierarchy and prioritisation that made the desktop experience stronger too.</p>
+      <figure style="max-width: 300px">
+        <video src="../../assets/video/SLK9uk8cUWwYpfFoeKSrvF4Nps.mp4" aria-label="AFL Fantasy - Compare flow" autoplay muted loop playsinline preload="metadata"></video>
+        <figcaption>AFL Fantasy - Compare flow</figcaption>
+      </figure>
+      <h6>Interaction patterns</h6>
+      <p>For live scoring in particular, I designed state-based components that communicated change clearly, player score updates, rank movement, trade lock timing, so users understood what was happening without needing to refresh or navigate away. Real-time context, delivered clearly.</p>
+      <h2>Design System</h2>
+      <p>The design system was the project's structural backbone, and the work I'm most proud of.</p>
+      <p>Starting from the audit findings, I rebuilt the component library in Figma from scratch using atomic design principles:</p>
+      <ul>
+        <li><strong>Tokens first</strong>: colour, typography, spacing, and elevation, rounded corners, shadows, borderlines, defined as variables, ensuring visual decisions were systematic rather than ad hoc</li>
+        <li><strong>Component hierarchy</strong>: atoms → molecules → organisms, with clear naming conventions that matched the engineering implementation</li>
+        <li><strong>Native variants</strong>: each component documented for Web, iOS, and Android, with platform-native behaviour explicitly called out</li>
+        <li><strong>States and interactions:</strong> every component included all states: default, hover, active, disabled, error, loading</li>
+      </ul>
+      <p>The result was a library the engineering team could build from directly, dramatically reducing the back-and-forth during implementation. Dev handoff shifted from "interpret this design" to "implement this component as built", a fundamentally different relationship.</p>
+      <p><strong>Outcome:</strong> ~50-60% reduction in design debt across the product, with a component library that has become the team's single source of truth for all subsequent feature work.</p>
+      <figure>
+        <img src="../../assets/images/dbwouvyX2j2DB9OixuTBCLBGro.webp" alt="AFL Fantasy - Master Library &gt; 6.0 Components&gt; Tables" width="2400" height="1265" loading="lazy" decoding="async">
+        <figcaption>AFL Fantasy - Master Library &gt; 6.0 Components&gt; Tables</figcaption>
+      </figure>
+      <h3>Key Decisions &amp; Rationale</h3>
+      <p><strong>Rebuilding vs. refining</strong> Early in the project, there was a conversation about whether to refine the existing components or rebuild from scratch. I advocated for rebuilding, not out of preference for starting over, but because the existing components had accumulated so many exceptions that refining them would have required as much effort as rebuilding, with less clarity at the end. The audit data supported this position.</p>
+      <p><strong>Shipping iteratively, not all at once</strong> Rather than holding the redesign until every flow was finalised, I worked with the product manager to sequence releases, shipping the most-used flows first, gathering real feedback, and refining the system as we went. This kept the product live and learning while the system matured.</p>
+      <p><strong>Documenting decisions, not just outputs</strong> One of the biggest gaps I found was institutional knowledge, why certain design decisions had been made. I started documenting rationale alongside components in Figma, so that future designers (and engineers) could understand the <em>why</em>, not just the <em>what</em>. This paid dividends almost immediately, reducing the number of "why does this work this way?" questions in review.</p>
+      <figure>
+        <img src="../../assets/images/8gNyqjcA8UWYm81pL9wlcY8AA.webp" alt="AFL Fantasy - Design Strategy" width="2400" height="1265" loading="lazy" decoding="async">
+        <figcaption>AFL Fantasy - Design Strategy</figcaption>
+      </figure>
+      </div>
+      <dl class="facts">
+        <div><dt>Categories</dt><dd>Free to Play | Design Systems | Design Strategy | Product Branding | Gamification</dd></div>
+        <div><dt>Users</dt><dd>300,000+ active fans</dd></div>
+        <div><dt>Design key outcome</dt><dd>~50% reduction in design debt. Scalable design system build from scratch</dd></div>
+        <div><dt>Engineering outcome</dt><dd>Increased 30-50% dev handoff speed, well organised documentation.</dd></div>
+      </dl>
+    </section>
+
+      <div class="gallery">
+        <figure class="gallery__item">
+          <p class="gallery__num">01</p>
+          <img src="../../assets/images/XEtGSE95JuVo944UtI77eLAkIk.webp" alt="Landing Layout Explorations - Jorge Martin 2025" width="2400" height="1265" loading="lazy" decoding="async">
+          <figcaption>Landing Layout Explorations - Jorge Martin 2025</figcaption>
+        </figure>
+        <figure class="gallery__item">
+          <p class="gallery__num">02</p>
+          <img src="../../assets/images/GMiU4iTsULhsr7Cuh7kfZjn7VFs.webp" alt="Onboarding Explorations - Jorge Martin 2025" width="2400" height="1265" loading="lazy" decoding="async">
+          <figcaption>Onboarding Explorations - Jorge Martin 2025</figcaption>
+        </figure>
+      </div>
+
+    <!-- ===== Outcomes ===== -->
+    <section class="case-section">
+      <div class="prose">
+      <h2>Outcomes &amp; Impact</h2>
+      <div class="table-wrap">
+        <table>
+          <tr><th>Metric</th><th>Result</th></tr>
+          <tr><td>Design debt</td><td>~50% reduction across all platforms</td></tr>
+          <tr><td>Users served</td><td>300,000+ active fans</td></tr>
+          <tr><td>Platforms</td><td>Web, iOS, and Android, consistent across all three</td></tr>
+          <tr><td>Design system</td><td>Built from scratch; became department's single source of truth</td></tr>
+          <tr><td>Dev handoff</td><td>Measurably faster iteration cycles post-system launch</td></tr>
+          <tr><td>User feedback</td><td>Qualitative improvement in usability testing post-launch</td></tr>
+        </table>
+      </div>
+      <p>The redesign shipped ahead of a new AFL season, giving the team a clean foundation to build on. In the seasons that followed, new features were designed and shipped using the system, the compounding benefit of the earlier investment becoming visible with each sprint.</p>
+      <h2>What I Learned</h2>
+      <p><strong>Systems thinking is a product skill, not just a design skill.</strong> The biggest impact I had on this project wasn't any single screen, it was the decision to invest in the system underneath. That choice affected every feature that shipped after it, and it shaped how the engineering team thought about their own work.</p>
+      <p><strong>Constraint clarifies.</strong> Designing for a product with a defined, passionate user base forced me to make hard decisions early and defend them clearly. AFL Fantasy fans know the product deeply, they notice when something feels off, and they'll tell you. That accountability made the design work better.</p>
+      <p><strong>The handoff is part of the design.</strong> A design that doesn't survive implementation isn't a good design. The closest collaboration I had on this project was with the engineering lead, and the quality of the final product reflected that. I learned to think about implementation earlier, and to design in a way that made the engineer's job clearer, not harder.</p>
+      <figure>
+        <img src="../../assets/images/isinp6bdgFrUHQNyGOhqNCNSuhg.webp" alt="AFL Fantasy - Navigation Architecture" width="2400" height="1264" loading="lazy" decoding="async">
+        <figcaption>AFL Fantasy - Navigation Architecture</figcaption>
+      </figure>
+      <h5>Launch &amp; Delivery</h5>
+      <ul>
+        <li><strong>Pre-Launch (19.12.25):</strong> Marketing campaign across AFL channels and social platforms, with early access for selected AFL members</li>
+        <li><strong>Launch 1.0 (12.03.26):</strong> Web and responsive web release, with ongoing testing and QA</li>
+        <li><strong>Launch 2.0 (19.02.26):</strong> Mobile app launch on Apple App Store and Google Play</li>
+        <li><strong>Post-Launch (26.03.26):</strong> Continuous feature rollout driven by user feedback and AFL partnerships</li>
+      </ul>
+      </div>
+    </section>
+
+      <div class="gallery">
+        <figure class="gallery__item">
+          <p class="gallery__num">01</p>
+          <img src="../../assets/images/XzJDup6bEmF8UdPHkKZftbJPLck.webp" alt="Brand rationale. Underpinning the ecosystem expansion, grounding the design decisions in clear strategic and visual logic." width="2400" height="1264" loading="lazy" decoding="async">
+          <figcaption>Brand rationale. Underpinning the ecosystem expansion, grounding the design decisions in clear strategic and visual logic.</figcaption>
+        </figure>
+        <figure class="gallery__item">
+          <p class="gallery__num">02</p>
+          <img src="../../assets/images/X6M4jnV3hxbUpvmuleXODUCWd38.webp" alt="Button System Rationale - Translating tokenisation concepts into a coherent framework that aligned design strategy with dev constraints" width="2400" height="1265" loading="lazy" decoding="async">
+          <figcaption>Button System Rationale - Translating tokenisation concepts into a coherent framework that aligned design strategy with dev constraints</figcaption>
+        </figure>
+        <figure class="gallery__item">
+          <p class="gallery__num">03</p>
+          <img src="../../assets/images/OgJayV2y8uWEuBomU3YcvP26Wiw.webp" alt="Onboarding Screens - Jorge Martin 2025" width="2400" height="1265" loading="lazy" decoding="async">
+          <figcaption>Onboarding Screens - Jorge Martin 2025</figcaption>
+        </figure>
+      </div>
+
+    <!-- ===== See also ===== -->
+    <section class="see-also">
+      <h2 class="tagline">see also</h2>
+      <a class="see-also__item" href="../ceres/" style="--tile: #111112">
+        <span class="see-also__thumb"><video aria-label="Ceres app on tablet and phone" src="../../assets/video/0JPAyOs09bNlZjHh4ccTBBQI.mp4" autoplay muted loop playsinline preload="metadata"></video></span>
+        <span class="see-also__text">
+          <span class="see-also__tag">SaaS in progress</span><br>
+          <span class="see-also__title">Ceres</span>
+        </span>
+        <svg class="see-also__arrow" viewBox="0 0 256 256" aria-hidden="true"><path d="M200,64V168a8,8,0,0,1-16,0V83.31L69.66,197.66a8,8,0,0,1-11.32-11.32L172.69,72H88a8,8,0,0,1,0-16H192A8,8,0,0,1,200,64Z"/></svg>
+      </a>
+      <a class="see-also__item" href="../fifa-playzone/" style="--tile: rgb(69, 102, 99)">
+        <span class="see-also__thumb"><video aria-label="FIFA Play Zone screens" src="../../assets/video/0EO7nZF94YOSjuAi0yG7AePBRM.mp4" autoplay muted loop playsinline preload="metadata"></video></span>
+        <span class="see-also__text">
+          <span class="see-also__tag">Gamification</span><br>
+          <span class="see-also__title">FIFA Play Zone</span>
+        </span>
+        <svg class="see-also__arrow" viewBox="0 0 256 256" aria-hidden="true"><path d="M200,64V168a8,8,0,0,1-16,0V83.31L69.66,197.66a8,8,0,0,1-11.32-11.32L172.69,72H88a8,8,0,0,1,0-16H192A8,8,0,0,1,200,64Z"/></svg>
+      </a>
+    </section>
+
+    <!-- ===== Call to action ===== -->
+    <section class="cta">
+      <div>
+        <h2>Let’s <em class="serif">Create Together</em></h2>
+        <p class="cta__tag">Reach out anytime</p>
+      </div>
+      <div class="cta__action aim">
+        <a class="btn" href="../../contact/">
+          <span>Contact me</span>
+          <svg viewBox="0 0 256 256" aria-hidden="true"><path d="M200,64V168a8,8,0,0,1-16,0V83.31L69.66,197.66a8,8,0,0,1-11.32-11.32L172.69,72H88a8,8,0,0,1,0-16H192A8,8,0,0,1,200,64Z"/></svg>
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <!-- ===== Footer ===== -->
+  <footer class="site-footer">
+    <div class="site-footer__row">
+      <a class="brand" href="../../">
+        <img src="../../assets/icons/logo.svg" alt="" width="35" height="35">
+        <span>Jorge Martin</span>
+      </a>
+      <nav class="nav" aria-label="Footer">
+        <a href="../../latest-work/">Latest Work</a>
+        <a href="../../about/">About</a>
+        <a href="../../blog/">Blog</a>
+        <a href="../../contact/">Contact</a>
+      </nav>
+      <div class="socials">
+        <a href="https://www.linkedin.com/in/arturomartindesign/" target="_blank" rel="noopener" aria-label="LinkedIn"><span class="icon icon--linkedin"></span></a>
+        <a href="https://dribbble.com/arturomartin" target="_blank" rel="noopener" aria-label="Dribbble"><span class="icon icon--dribbble"></span></a>
+        <a href="https://medium.com/@arturomartin1" target="_blank" rel="noopener" aria-label="Medium"><span class="icon icon--medium"></span></a>
+      </div>
+    </div>
+    <div class="site-footer__legal">
+      <p>Jorge Martin © 2026 All rights reserved</p>
+      <p>We proudly acknowledge the First Peoples of Victoria as the Traditional Owners and custodians of the land, waters and skies on which we live and work</p>
+    </div>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,742 @@
+<!doctype html>
+<html lang="en-AU">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Jorge Martin · Senior Product Designer · Melbourne</title>
+  <meta name="description" content="Senior Product Designer with 5+ years across sports, SaaS, and regulated platforms. Design systems, AFL Fantasy, FIFA+, TAB, and more. Based in Melbourne.">
+  <link rel="canonical" href="https://jorgemartin.design/work/ceres/">
+
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://jorgemartin.design/work/ceres/">
+  <meta property="og:title" content="Jorge Martin · Senior Product Designer · Melbourne">
+  <meta property="og:description" content="Senior Product Designer with 5+ years across sports, SaaS, and regulated platforms. Design systems, AFL Fantasy, FIFA+, TAB, and more. Based in Melbourne.">
+  <meta property="og:image" content="https://jorgemartin.design/assets/images/h6qqPL3QZ8wPgKcwJmxTs7duzrc.webp">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <link rel="icon" href="../../assets/images/Y2CQSM1bWsq7bWcdmqtoUGIrQyg.png" media="(prefers-color-scheme: light)">
+  <link rel="icon" href="../../assets/images/NkMLTrWsmjRmszUXBF07g3mEE.png" media="(prefers-color-scheme: dark)">
+  <link rel="apple-touch-icon" href="../../assets/images/C7DCQwpNZEM6WE1IkG9xE67PM9Q.png">
+
+  <link rel="preload" href="../../assets/fonts/Inter-Variable.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="../../css/styles.css">
+  <script src="../../js/main.js" defer></script>
+</head>
+<body>
+
+  <!-- ===== Header ===== -->
+  <header class="site-header">
+    <div class="site-header__inner">
+      <a class="brand" href="../../">
+        <img src="../../assets/icons/logo.svg" alt="" width="35" height="35">
+        <span>Jorge Martin</span>
+      </a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">Menu</button>
+      <nav class="nav" id="site-nav" aria-label="Main">
+        <a href="../../latest-work/" aria-current="page">Latest Work</a>
+        <a href="../../about/">About</a>
+        <a href="../../blog/">Blog</a>
+        <a href="../../contact/">Contact</a>
+      </nav>
+      <span class="site-header__progress" aria-hidden="true"></span>
+    </div>
+  </header>
+
+  <main class="page" style="--accent: #faf03c">
+    <h1 class="page-title aim">Ceres</h1>
+
+    <!-- ===== Overview ===== -->
+    <section class="case-section">
+      <div class="prose">
+      <h2>Overview</h2>
+      <p>Ceres is a property sustainability SaaS platform, a single product serving three fundamentally different users: tenants tracking personal energy and consumption, organisations monitoring portfolio-wide ESG performance, and building managers responding to real-time operational issues.</p>
+      <p>The core promise is deceptively simple: help people move from <strong>data → insight → action</strong> more efficiently. The challenge is that each user type needs a different version of that journey, at different scales, with different urgency, and with radically different levels of data literacy.</p>
+      <p>Most platforms of this kind are designed by engineers, for engineers. The information is all there, but the cognitive work of navigating it, understanding it, and acting on it is left entirely to the user. Ceres exists to fix that.</p>
+      <p>As sole designer and product founder, I've owned the entire experience: from defining the problem space and mapping user needs, through to the data architecture, information design, interaction patterns, component system, and high-fidelity UI. First end-to-end solo founding project.</p>
+      <h5>The Problem</h5>
+      <h6>Complex data tools typically share the same set of sins:</h6>
+      <ul>
+        <li><strong>Everything is visible at once.</strong> Dense tables, endless filters, nested menus, the interface presents maximum information rather than the right information.</li>
+        <li><strong>Context collapses under scale.</strong> When datasets grow, the UI doesn't adapt. Users lose their place, lose their thread, and lose confidence in what they're looking at.</li>
+        <li><strong>The gap between data and decision is invisible.</strong> Raw data doesn't tell you what to do. Most platforms stop at showing you the numbers. Ceres needed to go further.</li>
+      </ul>
+      <p>The result of these patterns, which I validated through early-stage user conversations, was predictable:</p>
+      <ul>
+        <li><strong>High cognitive load:</strong> Users reported needing significant mental effort just to orient themselves within the platform, before they could begin any actual analysis</li>
+        <li><strong>Slower task completion:</strong> Navigating between data views to piece together a complete picture required too many steps and too much context-switching</li>
+        <li><strong>Disengagement from key features:</strong> Several high-value features were going unused, not because users didn't need them, but because they were too hard to find and too hard to understand in context</li>
+      </ul>
+      <p>This wasn't a data problem. It was a design problem.</p>
+      <h5>My Role</h5>
+      <p>As both founder and lead designer, I had no design brief handed to me, I wrote it. That meant:</p>
+      <ul>
+        <li>Defining the product vision and translating it into a UX strategy</li>
+        <li>Conducting early user conversations to pressure-test assumptions</li>
+        <li>Mapping the full information architecture before touching a single screen</li>
+        <li>Designing every flow: discovery, navigation, filtering, data drill-down, and insight surfacing</li>
+        <li>Building a Figma component library from scratch to support fast iteration</li>
+        <li>Running internal usability sessions and iterating based on findings</li>
+      </ul>
+      <p>The absence of a team was both a constraint and a forcing function. Every decision had to be defensible on its own merits, there was no design review to catch weak thinking.</p>
+      </div>
+      <dl class="facts">
+        <div><dt>Role</dt><dd>Lead Product Designer</dd></div>
+        <div><dt>Timeline</dt><dd>2026 - In Progress</dd></div>
+        <div><dt>Platforms</dt><dd>iOS, MacOS, Web</dd></div>
+        <div><dt>Company</dt><dd>Jorge Martin</dd></div>
+      </dl>
+    </section>
+
+    <!-- Live embed of the Ceres site -->
+    <div class="embed">
+      <iframe src="https://ceresapp.au" title="Ceres App" loading="lazy"></iframe>
+    </div>
+
+    <!-- ===== Discovery, design approach, design system ===== -->
+    <section class="case-section case-section--flip">
+      <div class="prose">
+      <h2>Discovery</h2>
+      <h3>User research &amp; personas</h3>
+      <p>Before any design work began, I mapped the three distinct users Ceres needed to serve, and the research made clear that they weren't just different roles; they were fundamentally different relationships with data.</p>
+      <p><strong>Emma Chen. Tenant (Marketing Specialist, 29, Melbourne)</strong> Emma wants to track and reduce her personal energy and water usage, live more sustainably, and understand her own environmental impact. Her pain: no personal-level feedback, unclear data, tools that feel generic. What she needs is a personal dashboard, benchmarks against similar households, simple action tips, and visible progress. She's motivated by goals: she already tracks fitness and finance. Where solar makes this richer: if her building has rooftop solar, her dashboard can show generation vs. consumption: "you produced 14 kWh today, used 9 kWh"; shifting the experience from guilt-driven reduction to net-positive achievement. That framing is significantly more rewarding, and feeds directly into gamification and benchmarks. The design opportunity: make sustainability <em>personal, visible, and rewarding</em>.</p>
+      <p><strong>Daniel Foster. Head of Sustainability (42, Sydney)</strong> Daniel is managing ESG compliance across a property portfolio. He needs to monitor performance at scale, produce automated reports, and reduce emissions and costs. His pain: fragmented data across systems, manual reporting, and a lack of real-time insight. He's data-driven and strategic. Solar and battery data is central to his use case: portfolio-level generation figures, renewable energy percentages, carbon offset calculations, and battery arbitrage performance are exactly the metrics that go into NABERS ratings and sustainability disclosures. Automated ESG reporting without generation data is incomplete for any building with solar, Ceres closes that gap. The design opportunity: turn raw building data into <em>decision-ready insights</em>.</p>
+      <p><strong>Diego Gonzales. Building Manager (38, Melbourne)</strong> Diego's job is operational, maintain efficient building systems, fix issues fast, reduce energy waste. His pain: too many data points with too little clarity, reactive workflows, and complex tools that slow him down. He's time-constrained and task-oriented. He needs real-time alerts, clear action recommendations, and a UI that works on mobile and tablet. Solar and batteries add a direct layer to his alert surface: inverter faults, battery degradation, and panels generating significantly below expected output are all maintenance triggers, the same operational urgency as a water leak or power fault. The design opportunity: <em>fast, actionable intelligence</em>, not more dashboards.</p>
+      <figure>
+        <img src="../../assets/images/NT83NFGPXkeLMDeGtShnCsSzik8.webp" alt="Ceres Energy - User research &amp; personas" width="2400" height="1152" loading="lazy" decoding="async">
+        <figcaption>Ceres Energy - User research &amp; personas</figcaption>
+      </figure>
+      <p>Three questions anchored every user conversation:</p>
+      <ol>
+        <li><em>What does your current process look like when you're trying to make a decision from data?</em></li>
+        <li><em>Where do you typically get stuck or frustrated?</em></li>
+        <li><em>What does "understanding the data" feel like when it's working well?</em></li>
+      </ol>
+      <p>The answers were consistent across all three user types: people didn't struggle to access data. They struggled to <strong>trust it, navigate it, and act on it</strong>, in that order. But the specific failure points were different for each persona, which shaped every design decision that followed.</p>
+      <h3>Mapping the problem space</h3>
+      <p>From that research, I mapped the user journey not as a series of screens, but as a series of cognitive states:</p>
+      <pre class="flow"><code>Orientation → Exploration → Comprehension → Validation → Action</code></pre>
+      <p>Each state had distinct needs. Orientation required landmarks and hierarchy. Exploration required flexible but guided navigation. Comprehension required progressive disclosure. Validation required confidence signals. Action required clear, low-friction next steps.</p>
+      <p>This framework became the design compass for every decision that followed.</p>
+      <h3>Key Insights</h3>
+      <p><strong>Insight 1: Users don't need more data , they need better framing.</strong> The existing mental model for data platforms is: show everything, let the user filter. Ceres needed to invert this: start with a clear frame, reveal depth on demand. Less isn't less; it's faster.</p>
+      <p><strong>Insight 2: Cognitive load is not just a UX problem, it's a product retention problem.</strong> If users feel overwhelmed every time they open the platform, they'll stop opening it. The design had to make complexity feel manageable from the very first view, not after onboarding, not after experience. Immediately.</p>
+      <p><strong>Insight 3: The interface should have a point of view.</strong> Generic data platforms are neutral by design. Ceres needed to make opinionated choices: what to surface first, what to emphasise, what to de-emphasise. That editorial layer, done well, is what turns a data tool into a decision tool.</p>
+      <h2>Design Approach</h2>
+      <h3>Platform architecture</h3>
+      <p>Before designing a single screen, I mapped the core data schema: the structural foundation that every UI decision would eventually rest on. Ceres is built around six interconnected entities:</p>
+      <ul>
+        <li><strong>Users</strong>: with roles (Manager or Resident) assigned at signup, tying permissions directly to the property hierarchy</li>
+        <li><strong>Property</strong>: a hierarchical model that scales from a single unit all the way to a multi-building complex, with parent-child relationships enabling portfolio views</li>
+        <li><strong>Maintenance Requests</strong>: the operational layer linking users, properties, and assigned responders with full status tracking</li>
+        <li><strong>Devices</strong>: utility meters (power, water, gas), rooftop solar, and battery systems attached to properties, with a boolean flag distinguishing individual vs. community-level readings. The inclusion of solar and batteries makes Usage Data bidirectional: the platform tracks not just what properties consume, but what they generate, store, and export.</li>
+        <li><strong>Usage Data</strong>: normalised into a single table structure to enable consistent real-time monitoring and aggregated insights across any property level</li>
+        <li><strong>CCTV</strong>: event-based monitoring (motion, alerts, online status) with media references, forming the safety and awareness layer</li>
+      </ul>
+      <p>The schema was designed with three principles: clear separation of layers (user, property, device), structured data flows that support both real-time alerts and aggregated reporting, and scalability from a single unit to an enterprise portfolio without architectural changes.</p>
+      <p>This structure mattered for the design directly. The hierarchical property model meant navigation had to support context-switching between scales: a tenant seeing their unit, a building manager seeing their building, an organisation's sustainability department seeing their entire portfolio, without fragmenting into separate products. One schema, three user experiences.</p>
+      <figure>
+        <img src="../../assets/images/f6HGFZS3VuavbR0a4VGsZB3hk.webp" alt="Ceres Energy - Schema" width="2400" height="1152" loading="lazy" decoding="async">
+        <figcaption>Ceres Energy - Schema</figcaption>
+      </figure>
+      <h3>Information Architecture</h3>
+      <p>The foundational decision was to design the navigation around <strong>user intent</strong>, not data structure. Most platforms organise themselves around their data model (tables, categories, hierarchies). Ceres organises around what users are trying to do.</p>
+      <p>Ceres serves three distinct user types, each with a fundamentally different relationship to the data:</p>
+      <ul>
+        <li><strong>Tenants</strong>: motivated by personal behaviour, footprint feedback, and consumption insights</li>
+        <li><strong>Organisations</strong>: focused on portfolio-level strategy and ESG compliance</li>
+        <li><strong>Building managers</strong>: oriented toward operational action and issue resolution</li>
+      </ul>
+      <blockquote><p><em>A single platform serving three distinct user needs: motivation, strategy, and action. Aligning features to these layers drives both user value and business impact.</em></p></blockquote>
+      <p>This three-layer model shaped the entire information architecture. Rather than building one generic data experience, each user type has a distinct primary mode, and features are designed to serve the right audience at the right moment.</p>
+      <div class="table-wrap">
+        <table>
+          <tr><th>Feature</th><th>Tenants</th><th>Organisations</th><th>Building managers</th><th>Business impact</th></tr>
+          <tr><td>Personalised dashboard</td><td>Tracks usage</td><td>—</td><td>—</td><td>Increased engagement</td></tr>
+          <tr><td>Benchmarks</td><td>Motivates behaviour</td><td>Compare buildings</td><td>—</td><td>Behaviour change → lower consumption</td></tr>
+          <tr><td>Real-time alerts</td><td>Submit a non-urgent ticket</td><td>—</td><td>Detect issues fast</td><td>Reduced operational costs</td></tr>
+          <tr><td>Centralised analytics</td><td>Behaviour tracking</td><td>Portfolio tracking</td><td>Building tracking</td><td>Better decision making</td></tr>
+          <tr><td>Automated reporting</td><td>Behaviour tracking</td><td>ESG compliance</td><td>Strategic planning</td><td>Time savings + compliance</td></tr>
+          <tr><td>Action recommendations</td><td>Guides behaviour</td><td>Strategic planning</td><td>Immediate fixes</td><td>Efficiency optimisation</td></tr>
+          <tr><td>Gamification</td><td>User Retention</td><td>Loyalty and expand</td><td>Usability</td><td>Higher user retention</td></tr>
+          <tr><td>Responsive design</td><td>Easy tracking</td><td>Remote friendly</td><td>On-the-go fixes</td><td>Faster response times</td></tr>
+          <tr><td>Accessibility compliance</td><td>Readability</td><td>WCAG compliance</td><td>—</td><td>Universal accessibility</td></tr>
+        </table>
+      </div>
+      <p>I mapped the three primary intent modes that cut across all user types:</p>
+      <ul>
+        <li><strong>Overview</strong>: understand the current state at a glance</li>
+        <li><strong>Investigate</strong>: drill into a specific area or trend</li>
+        <li><strong>Act</strong>: take the next step based on what you've found</li>
+      </ul>
+      <p>Each mode received a distinct visual treatment and navigation pattern, so users always knew which mode they were in; and how to move between them without losing context.</p>
+      <h3>Progressive disclosure</h3>
+      <p>The core interaction pattern throughout Ceres is progressive disclosure: start with a summary, expand into detail. This appears at every level of the product:</p>
+      <ul>
+        <li><strong>Dashboard level:</strong> Key signals surface first; granular data is one interaction away</li>
+        <li><strong>Data view level:</strong> High-level trends visible immediately; drill-down reveals supporting data</li>
+        <li><strong>Action level:</strong> Recommended next steps presented clearly; full configuration available for advanced users</li>
+      </ul>
+      <p>The principle: never show more than the user needs at this moment. Earn the right to show complexity by first demonstrating clarity.</p>
+      <h3>Contextual guidance</h3>
+      <p>One of the most consistent pain points from user research was the absence of context, users knew what they were looking at, but not what it <em>meant</em>. I designed a lightweight contextual guidance layer: inline annotations, threshold indicators, and comparison anchors that help users interpret data without requiring them to hold context in their heads.</p>
+      <p>The goal was to make the interface feel like it's on the user's side, actively helping them understand, rather than passively presenting information.</p>
+      <h3>Confidence signals</h3>
+      <p>Before a user can act, they need to trust. I designed explicit confidence signals into the UI: data freshness indicators, source transparency, and completeness cues that tell users not just what the data says, but how much weight to give it. Small decisions, significant impact on user behaviour.</p>
+      <h2>Design System</h2>
+      <p>Building Ceres solo meant the design system wasn't optional, it was survival. Without a consistent component library, iteration would have been impossibly slow and the product would have fragmented visually as it grew.</p>
+      <p>I built the system in Figma using atomic design principles:</p>
+      <p><strong>Foundations</strong></p>
+      <ul>
+        <li>Colour tokens defined for semantic use (status, emphasis, neutral, interactive), not just aesthetic</li>
+        <li>Typography scale built for data density: readable at small sizes, clear at a glance</li>
+        <li>Spacing system based on an 8pt grid, applied consistently across all components</li>
+      </ul>
+      <p><strong>Components</strong></p>
+      <ul>
+        <li>Data display components (tables, cards, charts, summary tiles) designed as a family, consistent visual logic across all data types</li>
+        <li>Filter and navigation components designed for flexibility: the same component handles simple and complex filtering without visual complexity</li>
+        <li>State design built in from the start: every component documented for empty, loading, error, and populated states</li>
+      </ul>
+      <p><strong>Design principles baked in</strong> Each component was designed to carry the product's principles: progressive disclosure, clarity over density, confidence through consistency. The system isn't just a pattern library, it's the product's design logic made tangible.</p>
+      <h3>Key Decisions &amp; Rationale</h3>
+      <p><strong>Choosing progressive disclosure over filtering</strong> The instinct for data tools is to give users powerful filters. I deliberately constrained the early filtering experience, not because filtering isn't useful, but because a user who hasn't yet oriented themselves will apply filters without understanding the context they're filtering within. Progressive disclosure first; filtering as a tool once orientation is established.</p>
+      <p><strong>Designing for the confused user, not the expert</strong> It was tempting to optimise for the power user, someone who knew the data domain deeply and just wanted raw access. But the research made clear that even expert users struggled with orientation in complex datasets. I designed for the moment of confusion first, knowing that experts would find power-user features; but confused users would churn.</p>
+      <p><strong>Investing in micro-copy</strong> The words in the interface are as important as the components. I spent significant time on labels, tooltips, empty state messages, and confirmation copy. In a data platform, language that's technically accurate but contextually unclear adds cognitive load. Every word was chosen to reduce that load.</p>
+      </div>
+      <dl class="facts">
+        <div><dt>Categories</dt><dd>SaaS | Data Visualisation | End-to-end Product design</dd></div>
+        <div><dt>Users</dt><dd>Currently on Internal test</dd></div>
+        <div><dt>Design key outcome</dt><dd>Transform a data-heavy energy management platform from overwhelming to intuitive, without sacrificing depth</dd></div>
+        <div><dt>Engineering outcome</dt><dd>Built end-to-end as sole designer and founder</dd></div>
+      </dl>
+    </section>
+
+    <!-- Live embed of the Ceres design system -->
+    <div class="embed">
+      <iframe src="https://ceres-design-system.vercel.app/#/" title="Ceres design system" loading="lazy"></iframe>
+    </div>
+
+    <!-- ===== Status & next steps ===== -->
+    <section class="case-section">
+      <div class="prose">
+      <h2>Status &amp; Next Steps</h2>
+      <p>Ceres is currently in internal testing. The core flows, overview, investigation, and action, are built and functioning. The design system is stable and being used as the foundation for all new feature work.</p>
+      <p>Internal testing is focused on:</p>
+      <ul>
+        <li>Validating the progressive disclosure model against real usage patterns</li>
+        <li>Identifying points where the confidence signal layer is insufficient</li>
+        <li>Testing the navigation model with users across different levels of data literacy</li>
+      </ul>
+      <p>Quantitative outcome data will follow from this testing phase. What I can say from qualitative feedback so far: the consistent response to the first session is that the product "feels lighter" than comparable tools, which was exactly the design intention.</p>
+      <h3>What This Project Taught Me</h3>
+      <p><strong>Product thinking is design thinking.</strong> Building Ceres without a product manager meant I had to internalise both roles. Every design decision was also a product decision: what to build, in what order, for whom, and why. That dual responsibility made me a better designer, because I couldn't defer the hard strategic questions to someone else.</p>
+      <p><strong>Constraints surface good design.</strong> Working solo, with a limited timeline and no external design review, forced prioritisation. The design system wasn't built out of preference, it was built out of necessity. And the discipline that necessity imposed produced a better, more coherent product than unconstrained exploration would have.</p>
+      <p><strong>The best UX is invisible.</strong> The measure of success for Ceres isn't whether users notice the design. It's whether they forget it's there — because the interface is so clearly oriented around their intent that they stop thinking about the tool and start thinking about the decision. That's the goal. We're not there yet. But every design decision is pointed in that direction.</p>
+      <p><em>Ceres iOS is currently in internal testing, and MacOS app is under development.</em></p>
+      </div>
+    </section>
+
+    <figure class="device-video">
+      <video aria-label="Ceres iOS app walkthrough" src="../../assets/video/OYte1kt2XHJOlKUGtuC5OTYgeY.mp4" autoplay muted loop playsinline preload="metadata"></video>
+      <figcaption>Ceres iOS App. Currently on beta testing</figcaption>
+    </figure>
+
+    <figure class="device-mockup">
+      <style>
+        @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500&family=IBM+Plex+Mono:wght@400;500&display=swap');
+
+        .cm-root *, .cm-root *::before, .cm-root *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+        .cm-root {
+          --canvas:     #0A0A0A;
+          --surface-1:  #141414;
+          --surface-2:  #1C1C1E;
+          --surface-3:  #242426;
+          --teal:       #30B0C7;
+          --teal-dim:   rgba(48,176,199,0.12);
+          --cam:        #D5D14D;
+          --aqua:       #00D5BE;
+          --rose:       #FF758C;
+          --text-1:     #F6F6F6;
+          --text-2:     #8E8E93;
+          --text-3:     #636366;
+          --border:     rgba(255,255,255,0.07);
+          --border-med: rgba(255,255,255,0.11);
+          --font-sans:  "IBM Plex Sans", -apple-system, sans-serif;
+          --font-mono:  "IBM Plex Mono", ui-monospace, monospace;
+          font-family: var(--font-sans);
+          color: var(--text-1);
+          font-size: 15px;
+          -webkit-font-smoothing: antialiased;
+          width: 100%;
+        }
+
+        /* ── Mockup shell ── */
+        .cm-root .mockup-wrap {
+          width: 100%; border: 1px solid rgba(255,255,255,0.11);
+          border-radius: 12px; overflow: hidden;
+          background: var(--surface-1);
+          box-shadow: 0 9px 20px #0000004a, 0 37px 37px #00000042, 0 84px 50px #00000026;
+        }
+        .cm-root .mockup-topbar {
+          height: 40px; background: var(--surface-2);
+          border-bottom: 1px solid var(--border);
+          display: flex; align-items: center; padding: 0 16px; gap: 8px;
+        }
+        .cm-root .mock-dot { width: 10px; height: 10px; border-radius: 50%; }
+        .cm-root .mock-dot.r { background: #FF5F57; }
+        .cm-root .mock-dot.y { background: #FFBD2E; }
+        .cm-root .mock-dot.g { background: #27C93F; }
+        .cm-root .mock-url-bar {
+          flex: 1; height: 22px; border-radius: 5px;
+          background: var(--surface-3); margin: 0 12px;
+          display: flex; align-items: center; padding: 0 10px;
+          font-family: var(--font-mono); font-size: 10px; color: var(--text-3);
+        }
+        .cm-root .mockup-body {
+          display: grid; grid-template-columns: 175px 230px 1fr;
+          height: 490px;
+        }
+
+        /* ── Workspace sidebar ── */
+        .cm-root .mock-ws {
+          background: var(--surface-2); border-right: 1px solid var(--border);
+          display: flex; flex-direction: column; overflow: hidden;
+        }
+        .cm-root .mock-ws-head {
+          display: flex; align-items: center; justify-content: space-between;
+          padding: 9px 10px 9px 12px; border-bottom: 1px solid var(--border); flex-shrink: 0;
+        }
+        .cm-root .mock-ws-name {
+          display: flex; align-items: center; gap: 5px;
+          font-size: 11.5px; font-weight: 500; color: var(--text-1);
+        }
+        .cm-root .mock-ws-icons { display: flex; gap: 2px; }
+        .cm-root .mock-ws-icon {
+          width: 22px; height: 22px; border-radius: 4px;
+          display: grid; place-items: center; color: var(--text-3);
+        }
+        .cm-root .mock-ws-icon svg { width: 12px; height: 12px; stroke: currentColor; fill: none; stroke-width: 1.5; stroke-linecap: round; stroke-linejoin: round; }
+        .cm-root .mock-ws-nav { padding: 6px 6px 0; flex-shrink: 0; }
+        .cm-root .mock-ws-item {
+          display: flex; align-items: center; gap: 7px;
+          padding: 5px 8px; border-radius: 5px;
+          font-size: 11px; color: var(--text-2); cursor: pointer;
+        }
+        .cm-root .mock-ws-item.active { background: rgba(255,255,255,0.06); color: var(--text-1); }
+        .cm-root .mock-ws-item svg {
+          width: 12px; height: 12px; stroke: currentColor; fill: none;
+          stroke-width: 1.5; stroke-linecap: round; stroke-linejoin: round;
+          flex-shrink: 0; opacity: 0.7;
+        }
+        .cm-root .mock-ws-group { padding: 12px 6px 0; flex-shrink: 0; }
+        .cm-root .mock-ws-group-label {
+          display: flex; align-items: center; gap: 3px;
+          font-size: 10px; font-weight: 500; color: var(--text-3);
+          padding: 2px 8px 5px; letter-spacing: 0.03em;
+        }
+        .cm-root .mock-ws-group-label svg { width: 9px; height: 9px; stroke: currentColor; fill: none; stroke-width: 2; }
+        .cm-root .mock-fav-dot { width: 8px; height: 8px; border-radius: 3px; flex-shrink: 0; }
+
+        /* ── Request list ── */
+        .cm-root .mock-list {
+          background: var(--surface-1); border-right: 1px solid var(--border);
+          display: flex; flex-direction: column; overflow: hidden;
+        }
+        .cm-root .mock-list-head {
+          display: flex; align-items: center; justify-content: space-between;
+          padding: 9px 12px; border-bottom: 1px solid var(--border); flex-shrink: 0;
+        }
+        .cm-root .mock-list-head-title { font-size: 11.5px; font-weight: 500; color: var(--text-1); }
+        .cm-root .mock-list-head-actions { display: flex; gap: 1px; }
+        .cm-root .mock-list-head-action {
+          width: 22px; height: 22px; border-radius: 4px;
+          display: grid; place-items: center; color: var(--text-3);
+        }
+        .cm-root .mock-list-head-action svg { width: 12px; height: 12px; stroke: currentColor; fill: none; stroke-width: 1.5; stroke-linecap: round; }
+        .cm-root .mock-list-group-head {
+          display: flex; align-items: center; gap: 6px;
+          padding: 10px 12px 4px;
+          font-size: 10px; font-weight: 500; color: var(--text-3); letter-spacing: 0.02em;
+        }
+        .cm-root .mock-list-group-dot { width: 7px; height: 7px; border-radius: 50%; flex-shrink: 0; }
+        .cm-root .mock-list-group-dot.yellow { background: #F5BD4F; }
+        .cm-root .mock-list-group-dot.gray { background: var(--surface-3); border: 1px solid var(--border-med); }
+        .cm-root .mock-list-row {
+          display: flex; align-items: center; gap: 7px;
+          padding: 6px 12px; cursor: pointer; position: relative;
+        }
+        .cm-root .mock-list-row.sel { background: rgba(255,255,255,0.045); }
+        .cm-root .mock-list-row.sel::before {
+          content: ""; position: absolute; left: 0; top: 0; bottom: 0;
+          width: 2px; background: var(--teal); border-radius: 0 2px 2px 0;
+        }
+        .cm-root .mock-list-prio { width: 7px; height: 7px; border-radius: 50%; flex-shrink: 0; }
+        .cm-root .mock-list-prio.high { background: var(--rose); }
+        .cm-root .mock-list-prio.med  { background: #F5BD4F; }
+        .cm-root .mock-list-prio.low  { background: var(--surface-3); border: 1px solid var(--border-med); }
+        .cm-root .mock-list-row-title { flex: 1; font-size: 11px; color: var(--text-2); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+        .cm-root .mock-list-row.sel .mock-list-row-title { color: var(--text-1); }
+        .cm-root .mock-list-row-time { font-family: var(--font-mono); font-size: 9px; color: var(--text-3); flex-shrink: 0; }
+
+        /* ── Detail pane ── */
+        .cm-root .mock-detail-l {
+          background: var(--canvas); display: flex; flex-direction: column; overflow: hidden;
+        }
+        .cm-root .mock-detail-bar {
+          height: 36px; flex-shrink: 0;
+          display: flex; align-items: center; justify-content: space-between;
+          padding: 0 12px; border-bottom: 1px solid var(--border);
+          background: rgba(20,20,20,0.7);
+        }
+        .cm-root .mock-detail-bar-left {
+          display: flex; align-items: center; gap: 7px;
+          font-size: 11px; font-weight: 500; color: var(--text-2);
+          flex: 1; min-width: 0; overflow: hidden; white-space: nowrap;
+        }
+        .cm-root .mock-detail-bar-right { display: flex; align-items: center; gap: 8px; flex-shrink: 0; }
+        .cm-root .mock-detail-id { font-family: var(--font-mono); font-size: 10px; color: var(--text-3); }
+        .cm-root .mock-detail-nav { display: flex; gap: 1px; }
+        .cm-root .mock-detail-nav-btn {
+          width: 20px; height: 20px; border-radius: 4px;
+          display: grid; place-items: center; color: var(--text-3);
+        }
+        .cm-root .mock-detail-nav-btn svg { width: 11px; height: 11px; stroke: currentColor; fill: none; stroke-width: 2; stroke-linecap: round; }
+        .cm-root .mock-property-pill {
+          display: flex; align-items: center; gap: 4px;
+          font-size: 10px; color: var(--text-2);
+          background: var(--surface-2); border: 1px solid var(--border-med);
+          border-radius: 5px; padding: 2px 7px; cursor: pointer; white-space: nowrap;
+        }
+        .cm-root .mock-property-pill svg { opacity: 0.5; flex-shrink: 0; }
+        .cm-root .mock-detail-cols {
+          flex: 1; display: grid; grid-template-columns: 150px 1fr; overflow: hidden;
+        }
+        .cm-root .mock-detail-main-col { padding: 16px 18px; overflow-y: auto; text-align: left; order: 2; }
+        .cm-root .mock-detail-main-col::-webkit-scrollbar { display: none; }
+        .cm-root .mock-issue-title { font-size: 15px; font-weight: 500; letter-spacing: -0.015em; margin-bottom: 9px; }
+        .cm-root .mock-issue-desc { font-size: 11px; color: var(--text-2); line-height: 1.65; margin-bottom: 16px; }
+        .cm-root .mock-issue-desc code, .cm-root .mock-act-text code, .cm-root .mock-ceres-body code {
+          font-family: var(--font-mono); font-size: 9.5px;
+          background: var(--surface-2); border: 1px solid var(--border);
+          border-radius: 3px; padding: 1px 4px; color: var(--text-2);
+        }
+        .cm-root .mock-activity-label {
+          font-size: 11px; font-weight: 500; color: var(--text-1);
+          border-top: 1px solid var(--border); padding-top: 13px; margin-bottom: 13px;
+        }
+        .cm-root .mock-act-item { display: flex; gap: 8px; margin-bottom: 14px; }
+        .cm-root .mock-act-avatar {
+          width: 21px; height: 21px; border-radius: 50%;
+          background: var(--surface-3); flex-shrink: 0;
+          display: flex; align-items: center; justify-content: center;
+          font-family: var(--font-mono); font-size: 7px; font-weight: 500; color: var(--text-2);
+        }
+        .cm-root .mock-act-avatar.teal { background: linear-gradient(135deg, var(--teal), var(--aqua)); color: #052028; }
+        .cm-root .mock-act-avatar.sys  { background: var(--surface-2); border: 1px solid var(--border); color: var(--teal); }
+        .cm-root .mock-act-body { flex: 1; min-width: 0; display: flex; flex-direction: column; align-items: flex-start; }
+        .cm-root .mock-act-who {
+          font-size: 10.5px; font-weight: 500; color: var(--text-1);
+          display: flex; align-items: center; gap: 5px; margin-bottom: 3px; flex-wrap: wrap;
+        }
+        .cm-root .mock-act-time { font-family: var(--font-mono); font-size: 9px; color: var(--text-3); font-weight: 400; }
+        .cm-root .mock-act-text { font-size: 11px; color: var(--text-2); line-height: 1.5; }
+        .cm-root .mock-act-sub { font-size: 10px; color: var(--text-3); margin-top: 4px; }
+        .cm-root .mock-act-item.other .mock-act-text {
+          display: inline-block; background: var(--surface-3); border: 1px solid var(--border-med);
+          border-radius: 3px 12px 12px 12px; padding: 7px 10px; max-width: 90%;
+        }
+        .cm-root .mock-act-item.self { flex-direction: row-reverse; }
+        .cm-root .mock-act-item.self .mock-act-body { align-items: flex-end; }
+        .cm-root .mock-act-item.self .mock-act-who { flex-direction: row-reverse; }
+        .cm-root .mock-act-item.self .mock-act-text {
+          display: inline-block; background: rgba(48,176,199,0.18); border: 1px solid rgba(48,176,199,0.30);
+          border-radius: 12px 3px 12px 12px; padding: 7px 10px; max-width: 90%;
+          color: var(--text-1); text-align: left;
+        }
+        .cm-root .mock-act-item.self .mock-act-sub { text-align: right; }
+        .cm-root .mock-ceres-card {
+          background: var(--surface-1); border: 1px solid var(--border);
+          border-radius: 7px; padding: 11px 13px; margin-top: 7px;
+        }
+        .cm-root .mock-ceres-card-head { font-size: 10.5px; font-weight: 500; color: var(--text-1); margin-bottom: 5px; }
+        .cm-root .mock-ceres-body { font-size: 10.5px; color: var(--text-2); line-height: 1.6; }
+        .cm-root .mock-ceres-git {
+          background: var(--surface-2); border: 1px solid var(--border);
+          border-radius: 5px; padding: 8px 10px; margin-top: 8px;
+          font-family: var(--font-mono); font-size: 9px; color: var(--text-3); line-height: 1.6;
+        }
+        .cm-root .mock-ceres-git .add { color: var(--aqua); }
+        .cm-root .mock-props-col {
+          border-right: 1px solid var(--border); padding: 14px 0; order: 1;
+          display: flex; flex-direction: column; gap: 0; overflow-y: auto;
+        }
+        .cm-root .mock-props-col::-webkit-scrollbar { display: none; }
+        .cm-root .mock-prop-item { padding: 8px 12px; border-bottom: 1px solid var(--border); }
+        .cm-root .mock-prop-item:last-child { border-bottom: none; }
+        .cm-root .mock-prop-lbl { font-family: var(--font-mono); font-size: 8.5px; text-transform: uppercase; letter-spacing: 0.08em; color: var(--text-3); margin-bottom: 4px; }
+        .cm-root .mock-prop-val { display: flex; align-items: center; gap: 6px; font-size: 10.5px; color: var(--text-1); }
+        .cm-root .mock-prop-val svg { width: 11px; height: 11px; stroke: currentColor; fill: none; stroke-width: 1.5; stroke-linecap: round; stroke-linejoin: round; opacity: 0.6; flex-shrink: 0; }
+        .cm-root .mock-prop-dot { width: 7px; height: 7px; border-radius: 50%; flex-shrink: 0; }
+        .cm-root .mock-prop-cta {
+          display: flex; align-items: center; justify-content: space-between;
+          padding: 3px 0; cursor: pointer; gap: 6px;
+        }
+        .cm-root .mock-prop-cta svg.cta-chevron { width: 9px; height: 9px; stroke: var(--text-3); fill: none; stroke-width: 2; flex-shrink: 0; }
+        .cm-root .mock-prop-assignee {
+          width: 16px; height: 16px; border-radius: 50%;
+          background: linear-gradient(135deg, var(--teal), var(--aqua));
+          display: flex; align-items: center; justify-content: center;
+          font-family: var(--font-mono); font-size: 6.5px; font-weight: 500; color: #0A0A0A;
+        }
+        .cm-root .mock-label-chips { display: flex; flex-wrap: wrap; gap: 4px; }
+        .cm-root .mock-label-chip {
+          display: inline-block; font-family: var(--font-mono); font-size: 9px;
+          padding: 2px 6px; border-radius: 3px;
+          border: 1px solid var(--border); background: var(--surface-2); color: var(--text-3);
+          margin: 2px 2px 0 0;
+        }
+      </style>
+
+      <div class="cm-root">
+        <div class="mockup-wrap">
+          <div class="mockup-topbar">
+            <div class="mock-dot r"></div>
+            <div class="mock-dot y"></div>
+            <div class="mock-dot g"></div>
+            <div class="mock-url-bar">app.ceres.com / requests</div>
+          </div>
+          <div class="mockup-body">
+
+            <!-- Workspace sidebar -->
+            <div class="mock-ws">
+              <div class="mock-ws-head">
+                <div class="mock-ws-name">
+                  <div style="width:20px;height:20px;border-radius:50%;background:rgba(48,176,199,0.2);display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:7px;font-weight:700;color:var(--teal);letter-spacing:0.02em;">AM</div>
+                  Alex M.
+                  <svg viewBox="0 0 24 24" style="width:9px;height:9px;stroke:currentColor;fill:none;stroke-width:2;opacity:0.35;"><polyline points="6 9 12 15 18 9"/></svg>
+                </div>
+                <div class="mock-ws-icons">
+                  <div class="mock-ws-icon"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg></div>
+                  <div class="mock-ws-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83-2.83l.06-.06A1.65 1.65 0 0 0 4.68 15a1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 2.83-2.83l.06.06A1.65 1.65 0 0 0 9 4.68a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 2.83l-.06.06A1.65 1.65 0 0 0 19.4 9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg></div>
+                </div>
+              </div>
+              <div class="mock-ws-nav">
+                <div class="mock-ws-item"><svg viewBox="0 0 24 24"><rect width="7" height="9" x="3" y="3" rx="1"/><rect width="7" height="5" x="14" y="3" rx="1"/><rect width="7" height="9" x="14" y="12" rx="1"/><rect width="7" height="5" x="3" y="16" rx="1"/></svg><span>Overview</span></div>
+                <div class="mock-ws-item"><svg viewBox="0 0 24 24"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg><span>Energy</span></div>
+                <div class="mock-ws-item active"><svg viewBox="0 0 24 24"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg><span>Requests</span></div>
+                <div class="mock-ws-item"><svg viewBox="0 0 24 24"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg><span>Messages</span></div>
+                <div class="mock-ws-item"><svg viewBox="0 0 24 24"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 0 1-3.46 0"/></svg><span>Notifications</span></div>
+              </div>
+              <div class="mock-ws-group">
+                <div class="mock-ws-group-label">Portfolio <svg viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg></div>
+                <div class="mock-ws-item"><svg viewBox="0 0 24 24"><path d="M6 22V4a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v18Z"/><path d="M6 12H4a2 2 0 0 0-2 2v8h4"/><path d="M18 9h2a2 2 0 0 1 2 2v11h-4"/></svg><span>Properties</span></div>
+                <div class="mock-ws-item"><svg viewBox="0 0 24 24"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg><span>Analytics</span></div>
+                <div class="mock-ws-item"><svg viewBox="0 0 24 24"><polygon points="23 7 16 12 23 17 23 7"/><rect x="1" y="5" width="15" height="14" rx="2" ry="2"/></svg><span>CCTV</span></div>
+                <div class="mock-ws-item" style="color:var(--text-3);"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="1"/><circle cx="19" cy="12" r="1"/><circle cx="5" cy="12" r="1"/></svg><span>More</span></div>
+              </div>
+              <div class="mock-ws-group">
+                <div class="mock-ws-group-label">Recent <svg viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg></div>
+                <div class="mock-ws-item"><div class="mock-fav-dot" style="background:#F5BD4F;"></div><span>HVAC Unit 3: Failure</span></div>
+                <div class="mock-ws-item"><div class="mock-fav-dot" style="background:var(--rose);"></div><span>Lift B: Emergency</span></div>
+                <div class="mock-ws-item"><div class="mock-fav-dot" style="background:var(--teal);"></div><span>Solar panel audit</span></div>
+                <div class="mock-ws-item" style="color:var(--text-3);"><div class="mock-fav-dot" style="background:var(--surface-3);border:1px solid var(--border-med);"></div><span>Lobby LED upgrade</span></div>
+              </div>
+            </div>
+
+            <!-- Request list -->
+            <div class="mock-list">
+              <div class="mock-list-head">
+                <div class="mock-list-head-title">Requests</div>
+                <div class="mock-list-head-actions">
+                  <div class="mock-list-head-action"><svg viewBox="0 0 24 24"><line x1="4" y1="6" x2="20" y2="6"/><line x1="4" y1="12" x2="14" y2="12"/><line x1="4" y1="18" x2="11" y2="18"/></svg></div>
+                  <div class="mock-list-head-action"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83"/></svg></div>
+                </div>
+              </div>
+              <div class="mock-list-group-head"><div class="mock-list-group-dot yellow"></div>In progress · 3</div>
+              <div class="mock-list-row sel"><div class="mock-list-prio med"></div><div class="mock-list-row-title">HVAC Unit 3: Failure</div><div class="mock-list-row-time">1h</div></div>
+              <div class="mock-list-row"><div class="mock-list-prio high"></div><div class="mock-list-row-title">Lift B: Emergency</div><div class="mock-list-row-time">3h</div></div>
+              <div class="mock-list-row"><div class="mock-list-prio med"></div><div class="mock-list-row-title">Pool pump pressure low</div><div class="mock-list-row-time">5h</div></div>
+              <div class="mock-list-group-head" style="margin-top:4px;"><div class="mock-list-group-dot gray"></div>Todo · 3</div>
+              <div class="mock-list-row"><div class="mock-list-prio low"></div><div class="mock-list-row-title">Solar panel inspection</div><div class="mock-list-row-time">1d</div></div>
+              <div class="mock-list-row"><div class="mock-list-prio low"></div><div class="mock-list-row-title">Lobby LED upgrade</div><div class="mock-list-row-time">2d</div></div>
+              <div class="mock-list-row"><div class="mock-list-prio low"></div><div class="mock-list-row-title">Fire safety audit</div><div class="mock-list-row-time">3d</div></div>
+            </div>
+
+            <!-- Detail pane -->
+            <div class="mock-detail-l">
+              <div class="mock-detail-bar">
+                <div class="mock-detail-bar-left">
+                  HVAC Unit 3: Failure Report
+                  <svg viewBox="0 0 24 24" style="width:10px;height:10px;stroke:#F5BD4F;fill:#F5BD4F;flex-shrink:0;"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                  <svg viewBox="0 0 24 24" style="width:10px;height:10px;stroke:var(--text-3);fill:none;stroke-width:2;flex-shrink:0;"><circle cx="12" cy="12" r="1"/><circle cx="19" cy="12" r="1"/><circle cx="5" cy="12" r="1"/></svg>
+                </div>
+                <div class="mock-detail-bar-right">
+                  <span style="font-size:10px;color:var(--text-3);font-family:var(--font-mono);">02 / 23</span>
+                  <div class="mock-detail-nav">
+                    <div class="mock-detail-nav-btn"><svg viewBox="0 0 24 24"><polyline points="15 18 9 12 15 6"/></svg></div>
+                    <div class="mock-detail-nav-btn"><svg viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"/></svg></div>
+                  </div>
+                  <span class="mock-property-pill">
+                    <svg viewBox="0 0 24 24" style="width:9px;height:9px;stroke:currentColor;fill:none;stroke-width:1.5;stroke-linecap:round;"><path d="M6 22V4a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v18Z"/><path d="M6 12H4a2 2 0 0 0-2 2v8h4"/><path d="M18 9h2a2 2 0 0 1 2 2v11h-4"/></svg>
+                    781 Toorak Rd
+                    <svg viewBox="0 0 24 24" style="width:8px;height:8px;stroke:var(--text-3);fill:none;stroke-width:2;"><polyline points="6 9 12 15 18 9"/></svg>
+                  </span>
+                  <span class="mock-detail-id">MNT-0142</span>
+                  <svg viewBox="0 0 24 24" style="width:11px;height:11px;stroke:var(--text-3);fill:none;stroke-width:1.5;stroke-linecap:round;"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg>
+                  <svg viewBox="0 0 24 24" style="width:11px;height:11px;stroke:var(--text-3);fill:none;stroke-width:1.5;stroke-linecap:round;"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+                </div>
+              </div>
+              <div class="mock-detail-cols">
+                <div class="mock-detail-main-col">
+                  <h2 class="mock-issue-title">HVAC Unit 3: Failure Report</h2>
+                  <p class="mock-issue-desc">Unit 3 stopped responding at 06:42 AEST. Cooling on floors 14–18 is offline. BMS showing fault code <code>E-47</code> (compressor overload). Residents on affected floors have been notified.</p>
+                  <div class="mock-activity-label">Activity</div>
+                  <div class="mock-act-item">
+                    <div class="mock-act-avatar teal"><svg viewBox="0 0 24 24" style="width:9px;height:9px;stroke:currentColor;fill:none;stroke-width:2;stroke-linecap:round;"><circle cx="12" cy="12" r="5"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3"/></svg></div>
+                    <div class="mock-act-body">
+                      <div class="mock-act-who">Ceres <span class="mock-act-time">created via BMS sensor · 1h ago</span></div>
+                      <div class="mock-act-text">Request created on behalf of <strong>781 Toorak Rd</strong> building management system.</div>
+                    </div>
+                  </div>
+                  <div class="mock-act-item other">
+                    <div class="mock-act-avatar" style="background:linear-gradient(135deg,#5E5CE6,#BF5AF2);color:#fff;">JW</div>
+                    <div class="mock-act-body">
+                      <div class="mock-act-who">Jordan Webb <span class="mock-act-time">· 58min ago</span></div>
+                      <div class="mock-act-text">Fault code <code>E-47</code> confirmed — compressor thermal overload. Resetting circuit now. If it trips again we'll need Klimaire on-site.</div>
+                    </div>
+                  </div>
+                  <div class="mock-act-item self">
+                    <div class="mock-act-avatar" style="background:var(--teal);color:#fff;">AM</div>
+                    <div class="mock-act-body">
+                      <div class="mock-act-who">Alex M. <span class="mock-act-time">· 42min ago</span></div>
+                      <div class="mock-act-text">@TechOps can you escalate to Klimaire service team?</div>
+                      <div class="mock-act-sub">↳ Alex connected <strong>TechOps</strong> · 40min ago</div>
+                    </div>
+                  </div>
+                  <div class="mock-act-item">
+                    <div class="mock-act-avatar teal"><svg viewBox="0 0 24 24" style="width:9px;height:9px;stroke:currentColor;fill:none;stroke-width:2;stroke-linecap:round;"><circle cx="12" cy="12" r="5"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3"/></svg></div>
+                    <div class="mock-act-body">
+                      <div class="mock-act-who">Ceres <span class="mock-act-time">· just now</span></div>
+                      <div class="mock-act-text">Examining issue <code>MNT-0142</code>…</div>
+                      <div class="mock-ceres-card">
+                        <div class="mock-ceres-card-head">Worked for 3min</div>
+                        <div class="mock-ceres-body">Traced <code>E-47</code> to contactor relay K3. Last 3 occurrences: 14 Feb, 28 Jan, 09 Jan — all during peak load. Recommend thermal cutout inspection before reset.
+                          <div class="mock-ceres-git">
+                            <div><span class="add">+ Recommended</span> Inspect contactor K3 · MNT-0142</div>
+                            <div>Branch: <code>mnt/hvac-unit3-e47-fix</code></div>
+                            <div style="margin-top:3px;">Priority: High · Est. resolution 4h</div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="mock-props-col">
+                  <div class="mock-prop-item">
+                    <div class="mock-prop-lbl">Status</div>
+                    <div class="mock-prop-cta">
+                      <div class="mock-prop-val" style="gap:5px;"><div class="mock-prop-dot" style="background:#F5BD4F;"></div>In Progress</div>
+                      <svg class="cta-chevron" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg>
+                    </div>
+                  </div>
+                  <div class="mock-prop-item">
+                    <div class="mock-prop-lbl">Priority</div>
+                    <div class="mock-prop-cta">
+                      <div class="mock-prop-val" style="gap:5px;">
+                        <svg viewBox="0 0 24 24" style="width:10px;height:10px;stroke:var(--cam);fill:none;stroke-width:2;stroke-linecap:round;opacity:1;flex-shrink:0;"><line x1="12" y1="19" x2="12" y2="5"/><polyline points="5 12 12 5 19 12"/></svg>
+                        High
+                      </div>
+                      <svg class="cta-chevron" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg>
+                    </div>
+                  </div>
+                  <div class="mock-prop-item">
+                    <div class="mock-prop-lbl">Assignee</div>
+                    <div class="mock-prop-cta">
+                      <div class="mock-prop-val" style="gap:5px;"><div class="mock-prop-assignee" style="background:linear-gradient(135deg,#5E5CE6,#BF5AF2);">JW</div>Jordan Webb</div>
+                      <svg class="cta-chevron" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg>
+                    </div>
+                  </div>
+                  <div class="mock-prop-item">
+                    <div class="mock-prop-lbl">Labels</div>
+                    <div class="mock-prop-cta" style="align-items:flex-start;">
+                      <div class="mock-label-chips">
+                        <span class="mock-label-chip">Maintenance</span>
+                        <span class="mock-label-chip">HVAC</span>
+                      </div>
+                      <svg class="cta-chevron" viewBox="0 0 24 24" style="margin-top:2px;"><polyline points="6 9 12 15 18 9"/></svg>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+      <figcaption>Ceres MacOS. Currently in development</figcaption>
+    </figure>
+
+    <!-- ===== See also ===== -->
+    <section class="see-also">
+      <h2 class="tagline">see also</h2>
+      <a class="see-also__item" href="../afl-fantasy/" style="--tile: rgba(40, 92, 112, 0.9)">
+        <span class="see-also__thumb"><video aria-label="AFL Compare players" src="../../assets/video/HXZXJ4z4XxqkjkL4GKg1h5PMgY.mp4" autoplay muted loop playsinline preload="metadata"></video></span>
+        <span class="see-also__text">
+          <span class="see-also__tag">Design systems</span><br>
+          <span class="see-also__title">AFL Fantasy</span>
+        </span>
+        <svg class="see-also__arrow" viewBox="0 0 256 256" aria-hidden="true"><path d="M200,64V168a8,8,0,0,1-16,0V83.31L69.66,197.66a8,8,0,0,1-11.32-11.32L172.69,72H88a8,8,0,0,1,0-16H192A8,8,0,0,1,200,64Z"/></svg>
+      </a>
+      <a class="see-also__item" href="../fifa-playzone/" style="--tile: rgb(69, 102, 99)">
+        <span class="see-also__thumb"><video aria-label="FIFA Play Zone screens" src="../../assets/video/0EO7nZF94YOSjuAi0yG7AePBRM.mp4" autoplay muted loop playsinline preload="metadata"></video></span>
+        <span class="see-also__text">
+          <span class="see-also__tag">Gamification</span><br>
+          <span class="see-also__title">FIFA Play Zone</span>
+        </span>
+        <svg class="see-also__arrow" viewBox="0 0 256 256" aria-hidden="true"><path d="M200,64V168a8,8,0,0,1-16,0V83.31L69.66,197.66a8,8,0,0,1-11.32-11.32L172.69,72H88a8,8,0,0,1,0-16H192A8,8,0,0,1,200,64Z"/></svg>
+      </a>
+    </section>
+
+    <!-- ===== Call to action ===== -->
+    <section class="cta">
+      <div>
+        <h2>Let’s <em class="serif">Create Together</em></h2>
+        <p class="cta__tag">Reach out anytime</p>
+      </div>
+      <div class="cta__action aim">
+        <a class="btn" href="../../contact/">
+          <span>Contact me</span>
+          <svg viewBox="0 0 256 256" aria-hidden="true"><path d="M200,64V168a8,8,0,0,1-16,0V83.31L69.66,197.66a8,8,0,0,1-11.32-11.32L172.69,72H88a8,8,0,0,1,0-16H192A8,8,0,0,1,200,64Z"/></svg>
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <!-- ===== Footer ===== -->
+  <footer class="site-footer">
+    <div class="site-footer__row">
+      <a class="brand" href="../../">
+        <img src="../../assets/icons/logo.svg" alt="" width="35" height="35">
+        <span>Jorge Martin</span>
+      </a>
+      <nav class="nav" aria-label="Footer">
+        <a href="../../latest-work/">Latest Work</a>
+        <a href="../../about/">About</a>
+        <a href="../../blog/">Blog</a>
+        <a href="../../contact/">Contact</a>
+      </nav>
+      <div class="socials">
+        <a href="https://www.linkedin.com/in/arturomartindesign/" target="_blank" rel="noopener" aria-label="LinkedIn"><span class="icon icon--linkedin"></span></a>
+        <a href="https://dribbble.com/arturomartin" target="_blank" rel="noopener" aria-label="Dribbble"><span class="icon icon--dribbble"></span></a>
+        <a href="https://medium.com/@arturomartin1" target="_blank" rel="noopener" aria-label="Medium"><span class="icon icon--medium"></span></a>
+      </div>
+    </div>
+    <div class="site-footer__legal">
+      <p>Jorge Martin © 2026 All rights reserved</p>
+      <p>We proudly acknowledge the First Peoples of Victoria as the Traditional Owners and custodians of the land, waters and skies on which we live and work</p>
+    </div>
+  </footer>
+</body>
+</html>

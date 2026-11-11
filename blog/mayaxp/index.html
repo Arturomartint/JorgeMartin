@@ -1,0 +1,164 @@
+<!doctype html>
+<html lang="en-AU">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Jorge Martin - Blog</title>
+  <meta name="description" content="Senior Product Designer with 5+ years across sports, SaaS, and regulated platforms. Design systems, AFL Fantasy, FIFA+, TAB, and more. Based in Melbourne.">
+  <link rel="canonical" href="https://jorgemartin.design/blog/mayaxp">
+
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://jorgemartin.design/blog/mayaxp">
+  <meta property="og:title" content="Jorge Martin - Blog">
+  <meta property="og:description" content="Senior Product Designer with 5+ years across sports, SaaS, and regulated platforms. Design systems, AFL Fantasy, FIFA+, TAB, and more. Based in Melbourne.">
+  <meta property="og:image" content="https://jorgemartin.design/assets/images/h6qqPL3QZ8wPgKcwJmxTs7duzrc.webp">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <link rel="icon" href="../../assets/images/Y2CQSM1bWsq7bWcdmqtoUGIrQyg.png" media="(prefers-color-scheme: light)">
+  <link rel="icon" href="../../assets/images/NkMLTrWsmjRmszUXBF07g3mEE.png" media="(prefers-color-scheme: dark)">
+  <link rel="apple-touch-icon" href="../../assets/images/C7DCQwpNZEM6WE1IkG9xE67PM9Q.png">
+
+  <link rel="preload" href="../../assets/fonts/Inter-Variable.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="../../css/styles.css">
+  <script src="../../js/main.js" defer></script>
+</head>
+<body>
+
+  <!-- ===== Header ===== -->
+  <header class="site-header">
+    <div class="site-header__inner">
+      <a class="brand" href="../../">
+        <img src="../../assets/icons/logo.svg" alt="" width="35" height="35">
+        <span>Jorge Martin</span>
+      </a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">Menu</button>
+      <nav class="nav" id="site-nav" aria-label="Main">
+        <a href="../../latest-work/">Latest Work</a>
+        <a href="../../about/">About</a>
+        <a href="../../blog/" aria-current="page">Blog</a>
+        <a href="../../contact/">Contact</a>
+      </nav>
+      <span class="site-header__progress" aria-hidden="true"></span>
+    </div>
+  </header>
+
+  <main class="page">
+    <h1 class="page-title aim">Maya XP</h1>
+
+    <figure class="post-hero">
+      <img src="../../assets/images/8nMAh98vYJTyyHjet23OdGMbZYU.webp" alt="" width="2400" height="1707" loading="lazy" decoding="async">
+    </figure>
+
+    <article class="article">
+      <div class="prose">
+      <h2>What Designing an AR App for a 2,000-Year-Old Civilisation Taught Me About Spatial UX</h2>
+      <p>There's a specific kind of frustration that happens when you're standing in front of something extraordinary and you can't make sense of it.</p>
+      <p>Imagine arriving at Tikal, one of the most significant Mayan archaeological sites in the world, deep inside a Guatemalan rainforest, after weeks of anticipation. You walk through the entrance. And then you're faced with... rocks. Partially ruined structures, weathered stone, a few plaques with vague descriptions. Without a background in archaeology or ancient history, the grandeur of what you're looking at is invisible. The site doesn't speak for itself. And there's no digital tool in existence that can make it speak.</p>
+      <p>That gap is what became Maya XP.</p>
+      <h2>The Problem</h2>
+      <p>As part of my Masters capstone, I set out to design an interactive, immersive mobile AR app that could give anyone: a student, a tourist, a curious person on the other side of the world, a meaningful way to experience the Mayan civilisation. Not just read about it. Experience it.</p>
+      <p>The research phase made the scope clear quickly. Ten competitor apps were analysed, spanning AR experiences, museum apps, and educational tools. None of them came close to doing this well. The information existed; archaeologists have produced extensive documentation of Mayan sites, their urban planning, their architecture, their art. But no single product had brought it together into something accessible, immersive, and emotionally resonant.</p>
+      <figure>
+        <img src="../../assets/images/A6nz9RnG6eb4it4YwOoVQJsBvE.webp" alt="Competitor analysis grid. Ten apps mapped across capability and experience quality" width="1612" height="1696" loading="lazy" decoding="async">
+        <figcaption>Competitor analysis grid. Ten apps mapped across capability and experience quality</figcaption>
+      </figure>
+      <p>The design problem wasn't a lack of content. It was a lack of translation.</p>
+      <h2>Two Users Who Shaped Everything</h2>
+      <p>Rather than design for an abstract audience, I built the personas around two very specific scenarios, scenarios that grounded every subsequent design decision in real, human frustration.</p>
+      <p><strong>Ajay</strong> is travelling through Latin America for two months. By the time he reaches Tikal, he's read a book about Mayan civilisation on the plane and is genuinely excited. He enters the site and immediately feels lost. The partially destroyed temples mean nothing to him without context. He can sense the scale of what he's looking at, but he can't access it. He leaves feeling like he missed something significant.</p>
+      <p><strong>Francisco and Danielle</strong> are on a road trip to Tulum. They visit the site spontaneously, explore without a map, miss hidden sections that were closed for restoration, and only discover at the on-site museum that artefacts they'd walked past were removed to foreign collections over a century ago. By the time they learn this, they're hungry and need to leave. The moment is gone.</p>
+      <figure>
+        <img src="../../assets/images/WMg9AwbxFmoWNkaZ3sY77zlods.webp" alt="User Journey Map" width="1530" height="1976" loading="lazy" decoding="async">
+        <figcaption>User Journey Map</figcaption>
+      </figure>
+      <p>Both scenarios pointed to the same underlying failures: no guidance, no context, no way to know what you were missing, and no connection between the physical site and the broader story of what happened to it.</p>
+      <h2>What the App Actually Needed to Do</h2>
+      <p>From those scenarios, three core product directions emerged:</p>
+      <p><strong>Virtual site reconstruction.</strong> The Mayan cities were once painted in vivid colours, precisely oriented to astronomical positions, and filled with detail that has since eroded or been lost. AR could overlay what they looked like at their peak onto what remains today, giving users a layered view of past and present simultaneously.</p>
+      <p><strong>Interactive 3D artefact exploration.</strong> Many of the most significant Mayan artefacts have been removed from their original locations and now sit in museums across Europe and North America. The app needed to let users encounter these objects, rotating, zooming, even virtually handling them, and understand the context of where they came from and where they are now.</p>
+      <p><strong>Repatriation mapping.</strong> This became one of the most unexpected and meaningful features of the project. A map layer tracking displaced artefacts, connecting their original locations to their current homes across the world, and inviting users to engage with the ongoing conversation about cultural repatriation. Design can carry ethical weight when it's given the space to.</p>
+      <figure>
+        <img src="../../assets/images/rlimiz9u2gOksKRZ6Qa2LI4vcw.webp" alt="Maya XP - App Userflow" width="1558" height="1438" loading="lazy" decoding="async">
+        <figcaption>Maya XP - App Userflow</figcaption>
+      </figure>
+      <figure>
+        <img src="../../assets/images/gNjFu2sxH5lBuEDmUygSarfURE.webp" alt="Maya XP - 3 tier progresive disclosure wires" width="1238" height="1410" loading="lazy" decoding="async">
+        <figcaption>Maya XP - 3 tier progresive disclosure wires</figcaption>
+      </figure>
+      <h2>The Design and Build</h2>
+      <p>The full production process ran across four months: two months of research and concept development, followed by three months of design and build, then testing and refinement.</p>
+      <p>The 3D reconstruction work was done in Blender: modelling, rigging, and animating structures based on archaeological research, including a collaboration with Massimo Stefani, a researcher and lecturer at Mexico's National University, who contributed a Collada file model of Tikal's central nucleus. Getting the historical accuracy right mattered: which colours the Mayans used, what plasters they applied to their buildings, how the sites were oriented relative to celestial events.</p>
+      <p>The AR interaction patterns were designed from scratch; there wasn't an established playbook for this type of spatial educational experience. How do you gesture through a 2,000-year-old pyramid? How does a user know what's interactive and what isn't? How do you handle the transition between the real physical environment and the virtual overlay? These were genuinely new problems to solve, and solving them taught me more about spatial UX than any tutorial could.</p>
+      <figure style="max-width: 598px">
+        <img src="../../assets/images/zc9Pbvv8nnQJih2DSZnxHcyVn2s.webp" alt="Maya XP - High-fidelity UI screens" width="1197" height="3325" loading="lazy" decoding="async">
+        <figcaption>Maya XP - High-fidelity UI screens</figcaption>
+      </figure>
+      <p><em>[Image: AR mocking ]</em></p>
+      <p>The design system was built in Figma, covering the full visual language of the app: typography, colour, iconography, component states, and interaction patterns across both 2D navigation and AR environments. Keeping consistency between the standard app UI and the spatial AR layer required treating them as one coherent system rather than two separate surfaces.</p>
+      <figure>
+        <img src="../../assets/images/dglUWgpNN6g79YntYiuXW7AEsk.webp" alt="Maya XP - Design system &amp; style tiles" width="1354" height="4146" loading="lazy" decoding="async">
+        <figcaption>Maya XP - Design system &amp; style tiles</figcaption>
+      </figure>
+      <h2>What I Learned</h2>
+      <p>Designing for spatial and AR environments forces a kind of design thinking that flat-screen products don't require. You can't rely on proximity, hierarchy, or familiar navigation patterns in the same way. Context changes constantly; the user is moving, the environment is changing, the physical and virtual are overlapping. Every interaction has to be legible in conditions you can't fully control.</p>
+      <p>The repatriation thread also stayed with me. What started as a feature idea became one of the most emotionally resonant parts of the project: the idea that a design product could make someone care about where a 1,400-year-old jade mask ended up, and why it matters. That's a kind of impact most digital products never get near.</p>
+      <p>Maya XP remains a prototype. There are two clear directions it could grow: deeper into the educational and curatorial pathway, in partnership with archaeological institutions and universities; or further into the social and political, becoming a tool for the broader conversation about cultural heritage and repatriation. Both feel worth pursuing.</p>
+      <p>For now it stands as one of the most personally meaningful things I've designed, and the project that pushed me furthest into territory I'd never worked in before.</p>
+      <p><em>Tools used: Blender · Lumion · Figma · After Effects · Illustrator Skills: UX research · Spatial interaction design · 3D modelling · 3D animation · AR/VR mocking · Design systems · Wireframing · High-fidelity prototype</em></p>
+      </div>
+      <dl class="facts">
+        <div><dt>date published</dt><dd>15 May 2026</dd></div>
+        <div><dt>reading time</dt><dd>10 min read</dd></div>
+      </dl>
+    </article>
+
+    <!-- ===== See also ===== -->
+    <section class="see-also">
+      <h2 class="tagline">.see also</h2>
+      <a class="post-next" href="../design-patterns/">
+        <span class="post-title">Design Patterns for the Architecture of the Future</span>
+        <svg viewBox="0 0 256 256" aria-hidden="true"><path d="M200,64V168a8,8,0,0,1-16,0V83.31L69.66,197.66a8,8,0,0,1-11.32-11.32L172.69,72H88a8,8,0,0,1,0-16H192A8,8,0,0,1,200,64Z"/></svg>
+      </a>
+    </section>
+
+    <!-- ===== Call to action ===== -->
+    <section class="cta">
+      <div>
+        <h2>Let’s <em class="serif">Create Together</em></h2>
+        <p class="cta__tag">Reach out anytime</p>
+      </div>
+      <div class="cta__action aim">
+        <a class="btn" href="../../contact/">
+          <span>Contact me</span>
+          <svg viewBox="0 0 256 256" aria-hidden="true"><path d="M200,64V168a8,8,0,0,1-16,0V83.31L69.66,197.66a8,8,0,0,1-11.32-11.32L172.69,72H88a8,8,0,0,1,0-16H192A8,8,0,0,1,200,64Z"/></svg>
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <!-- ===== Footer ===== -->
+  <footer class="site-footer">
+    <div class="site-footer__row">
+      <a class="brand" href="../../">
+        <img src="../../assets/icons/logo.svg" alt="" width="35" height="35">
+        <span>Jorge Martin</span>
+      </a>
+      <nav class="nav" aria-label="Footer">
+        <a href="../../latest-work/">Latest Work</a>
+        <a href="../../about/">About</a>
+        <a href="../../blog/">Blog</a>
+        <a href="../../contact/">Contact</a>
+      </nav>
+      <div class="socials">
+        <a href="https://www.linkedin.com/in/arturomartindesign/" target="_blank" rel="noopener" aria-label="LinkedIn"><span class="icon icon--linkedin"></span></a>
+        <a href="https://dribbble.com/arturomartin" target="_blank" rel="noopener" aria-label="Dribbble"><span class="icon icon--dribbble"></span></a>
+        <a href="https://medium.com/@arturomartin1" target="_blank" rel="noopener" aria-label="Medium"><span class="icon icon--medium"></span></a>
+      </div>
+    </div>
+    <div class="site-footer__legal">
+      <p>Jorge Martin © 2026 All rights reserved</p>
+      <p>We proudly acknowledge the First Peoples of Victoria as the Traditional Owners and custodians of the land, waters and skies on which we live and work</p>
+    </div>
+  </footer>
+</body>
+</html>
