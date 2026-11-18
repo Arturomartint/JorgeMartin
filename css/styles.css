@@ -42,7 +42,8 @@
   --card: #1c1c1e;
   --text: #fff;
   --text-2: rgba(255, 255, 255, 0.65);
-  --text-3: rgba(255, 255, 255, 0.25);
+  --text-3: rgba(255, 255, 255, 0.60);
+  --placeholder: rgba(255, 255, 255, 0.60);
   --heading: #d5dbe6;
   --line: rgba(255, 255, 255, 0.25);
   --line-soft: rgba(255, 255, 255, 0.1);
@@ -391,7 +392,7 @@ a:hover .post-title { color: #fff; }
   font: 14px/24px var(--font-sans);
 }
 .field textarea { min-height: 100px; resize: vertical; }
-.field input::placeholder, .field textarea::placeholder { color: rgba(255, 255, 255, 0.45); }
+.field input::placeholder, .field textarea::placeholder { color: var(--placeholder); }
 .field input:focus, .field textarea:focus { outline: none; border-color: #fff; box-shadow: inset 0 0 0 1px #fff; }
 .form-status { font-size: 14px; line-height: 22px; text-align: center; color: var(--text-2); }
 .form-status[data-state="success"] { color: #53caf5; }
