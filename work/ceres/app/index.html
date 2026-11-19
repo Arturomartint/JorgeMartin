@@ -96,11 +96,8 @@ html, body {
 /* ── App shell ── */
 #app {
   display: flex; flex-direction: column; position: relative;
-  width: min(1100px, calc(100vw - 48px));
-  height: 530px; /* 40px topbar + 490px body — matches mockup-embed.html */
-  border-radius: 12px; overflow: hidden;
-  border: 1px solid rgba(255,255,255,0.22);
-  box-shadow: 0 9px 20px rgba(0,0,0,0.29), 0 37px 37px rgba(0,0,0,0.26), 0 84px 50px rgba(0,0,0,0.15), 0 0 0 3px rgba(255,255,255,0.12);
+  width: 100vw; height: 100vh;
+  border-radius: 0; overflow: hidden;
 }
 
 /* ── Topbar ── */
@@ -2420,8 +2417,11 @@ function signOut() {
 }
 
 document.addEventListener('DOMContentLoaded', () => {
-  initApp();
-  document.getElementById('tb-url').textContent = 'app.ceres.com';
+  currentRole = 'resident';
+  document.getElementById('tb-avatar').textContent = 'SK';
+  doLogin();
+  showView('energy');
+  document.getElementById('tb-url').textContent = 'app.ceres.com / energy';
 });
 </script>
 </body>
