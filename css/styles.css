@@ -644,6 +644,7 @@ figcaption { margin-top: 8px; font-size: 13px; line-height: 1.2; font-style: ita
   .site-footer { padding: 72px 0 48px; }
   .site-footer__row { grid-template-columns: 1fr; gap: 28px; align-items: center; }
   .site-footer .brand { justify-content: center; }
+  .site-footer .brand span { display: inline; }
   .site-footer .nav { flex-wrap: wrap; gap: 20px 28px; justify-content: center; }
   .socials { justify-content: center; }
   .site-footer__legal { text-align: left; padding: 12px 0 0; }
