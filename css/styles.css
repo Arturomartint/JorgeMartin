@@ -325,7 +325,7 @@ a:hover > .icon { background: #fff; }
 
 /* 10. About --------------------------------------------------------------- */
 .lead {
-  font-size: clamp(30px, 3.1vw, 44px); line-height: 1.2; font-weight: 500; letter-spacing: 0;
+  font-size: clamp(19.5px, 2vw, 28.5px); line-height: 1.2; font-weight: 500; letter-spacing: 0;
   text-align: center; color: #e4e9f2;
 }
 /* Content pages (non-case-study): tighter above-the-fold */
