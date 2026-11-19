@@ -456,6 +456,9 @@ figcaption { margin-top: 8px; font-size: 13px; line-height: 1.2; font-style: ita
 /* Live embed (iframe) */
 .embed { aspect-ratio: 1200 / 682; overflow: hidden; border-radius: 12px; border: 1px solid var(--border-card); background: var(--surface); }
 .embed iframe { width: 100%; height: 100%; border: 0; }
+@media (max-width: 809px) {
+  .embed { aspect-ratio: unset; height: 90vh; }
+}
 
 /* Numbered full-width images */
 .gallery { display: flex; flex-direction: column; gap: 180px; margin-inline: -60px; }
