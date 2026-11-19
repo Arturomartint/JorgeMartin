@@ -104,6 +104,7 @@ button { font: inherit; color: inherit; background: none; border: 0; padding: 0;
   font-weight: 500;
   letter-spacing: -0.04em;
 }
+.page-hero { display: flex; flex-direction: column; gap: 16px; }
 /* small "aim" ornament: a ring sitting on a short line, right edge */
 .aim { position: relative; }
 .aim::before, .aim::after { content: ""; position: absolute; pointer-events: none; }
@@ -336,7 +337,8 @@ main.page:has(.post-feature) { padding-top: 128px; gap: 96px; }
 main.page:has(.lead) .page-title,
 main.page:has(.contact-grid) .page-title,
 main.page:has(.work-grid) .page-title,
-main.page:has(.post-feature) .page-title { font-size: clamp(44px, 5vw, 72px); }
+main.page:has(.post-feature) .page-title,
+main.page:has(.page-hero) .page-title { font-size: clamp(44px, 5vw, 72px); }
 .prose-block { display: flex; flex-direction: column; gap: 24px; }
 .prose-block p { font-size: 18px; line-height: 1.75; }
 .about-image img { width: 100%; height: auto; }
