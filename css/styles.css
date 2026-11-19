@@ -164,8 +164,8 @@ button { font: inherit; color: inherit; background: none; border: 0; padding: 0;
   display: grid; grid-template-columns: 1fr auto 1fr; align-items: center; gap: 10px;
 }
 .footer-col { display: flex; flex-direction: column; gap: 10px; }
-.footer-contact { display: flex; flex-direction: column; gap: 2px; font-size: 13px; line-height: 1.5; }
-.footer-contact a { color: var(--text-3); transition: color 0.2s; }
+.footer-contact { display: flex; flex-direction: column; gap: 2px; font-size: 12px; line-height: 1.5; font-weight: 300; }
+.footer-contact a { color: var(--text-2); transition: color 0.2s; }
 .footer-contact a:hover { color: #fff; }
 .site-footer .nav { gap: 36px; }
 .socials { display: flex; justify-content: flex-end; gap: 24px; }
@@ -646,7 +646,7 @@ figcaption { margin-top: 8px; font-size: 13px; line-height: 1.2; font-style: ita
   .site-footer .brand { justify-content: center; }
   .site-footer .brand span { display: inline; }
   .site-footer .footer-col { align-items: center; }
-  .site-footer .footer-contact { align-items: center; font-size: 11px; gap: 1px; }
+  .site-footer .footer-contact { align-items: center; font-size: 10px; gap: 1px; }
   .site-footer .nav { flex-wrap: wrap; gap: 20px 28px; justify-content: center; }
   .socials { justify-content: center; }
   .site-footer__legal { text-align: left; padding: 12px 0 0; }
