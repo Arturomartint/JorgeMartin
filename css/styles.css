@@ -603,6 +603,7 @@ figcaption { margin-top: 8px; font-size: 13px; line-height: 1.2; font-style: ita
   .cta { gap: 56px; }
   .reviews { gap: 56px; }
   .reviews__grid, .work-grid { grid-template-columns: 1fr; }
+  .work-grid li:only-child { grid-column: 1; }
   .clients__track { gap: 72px; padding-right: 72px; }
   .clients__track img { height: 30px; }
 
