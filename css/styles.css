@@ -420,6 +420,8 @@ a:hover .post-title { color: #fff; }
 
 /* Contact-specific: even tighter since it's only 3 blocks */
 main.page:has(.contact-grid) { gap: 40px; }
+main.page:has(.contact-grid) .page-title,
+main.page:has(.contact-grid) .lead { text-align: left; }
 main.page:has(.contact-grid) .contact-intro { max-width: 632px; margin: 0; text-align: left; font-size: clamp(18px, 1.8vw, 24px); line-height: 1.5; }
 main.page:has(.contact-grid) .social-list { flex: 0 0 auto; gap: 36px; }
 
