@@ -266,6 +266,7 @@ a:hover > .icon { background: #fff; }
 .stat__label { font-size: 14px; line-height: 1.2; font-weight: 500; letter-spacing: -0.28px; }
 
 .project-card--compact { aspect-ratio: 381 / 540; }
+.work-grid li:only-child .project-card--compact { aspect-ratio: 3 / 2; }
 .project-card--compact .project-card__title { font-size: 20px; line-height: 1.4; letter-spacing: 0; }
 .project-card--compact .project-card__arrow { width: 32px; height: 32px; }
 
@@ -599,6 +600,7 @@ figcaption { margin-top: 8px; font-size: 13px; line-height: 1.2; font-style: ita
   .project-card__arrow { width: 32px; height: 32px; }
   .project-card__stats { grid-template-columns: 1fr; gap: 10px; }
   .project-card--compact { aspect-ratio: 4 / 5; }
+  .work-grid li:only-child .project-card--compact { aspect-ratio: 3 / 2; }
 
   .cta { gap: 56px; }
   .reviews { gap: 56px; }
