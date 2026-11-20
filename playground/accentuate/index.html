@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Accentuate: Designing a Human-in-the-Loop Language Platform · Jorge Martin</title>
-  <meta name="description" content="A SaaS case study on bridging AI-powered analysis and human tutoring — designing for trust, habit, and language fluency.">
+  <meta name="description" content="A SaaS case study on bridging AI-powered analysis and human tutoring: designing for trust, habit, and language fluency.">
   <meta name="robots" content="index, follow">
   <link rel="canonical" href="https://jorgemartin.design/playground/accentuate">
   <link rel="sitemap" type="application/xml" href="/sitemap.xml">
@@ -12,11 +12,11 @@
   <meta property="og:type" content="article">
   <meta property="og:url" content="https://jorgemartin.design/playground/accentuate">
   <meta property="og:title" content="Accentuate: Designing a Human-in-the-Loop Language Platform · Jorge Martin">
-  <meta property="og:description" content="A SaaS case study on bridging AI-powered analysis and human tutoring — designing for trust, habit, and language fluency.">
-  <meta property="og:image" content="https://jorgemartin.design/assets/images/8nMAh98vYJTyyHjet23OdGMbZYU.webp">
+  <meta property="og:description" content="A SaaS case study on bridging AI-powered analysis and human tutoring: designing for trust, habit, and language fluency.">
+  <meta property="og:image" content="https://jorgemartin.design/assets/images/Accentuate%20-%201.png">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Accentuate: Designing a Human-in-the-Loop Language Platform · Jorge Martin">
-  <meta name="twitter:description" content="A SaaS case study on bridging AI-powered analysis and human tutoring — designing for trust, habit, and language fluency.">
+  <meta name="twitter:description" content="A SaaS case study on bridging AI-powered analysis and human tutoring: designing for trust, habit, and language fluency.">
   <link rel="icon" type="image/svg+xml" href="../../assets/icons/logo.svg">
   <link rel="apple-touch-icon" href="../../assets/images/C7DCQwpNZEM6WE1IkG9xE67PM9Q.png">
 
@@ -49,9 +49,8 @@
   <main class="page" style="--accent: #c4a7ff">
     <h1 class="page-title aim">Accentuate</h1>
 
-    <!-- HERO IMAGE: replace src with actual image path when available -->
     <figure class="post-hero">
-      <img src="" alt="" width="2400" height="1600" loading="lazy" decoding="async">
+      <img src="../../assets/images/Accentuate%20-%201.png" alt="Accentuate language learning platform" width="2400" height="1600" loading="lazy" decoding="async">
     </figure>
 
     <article class="article">
@@ -59,35 +58,70 @@
       <h2>What Building a Language App in the Age of AI Actually Taught Me</h2>
       <p>Most language apps follow the same loop: input, AI response, gamified reward. It works for a few weeks. The streak keeps you coming back. But the feedback is generic, the corrections feel automated, and somewhere around week six you realise you're completing exercises without actually improving.</p>
       <p>The fundamental flaw is that AI alone can't give you what a good tutor can: contextual, personalised, trust-based feedback delivered at the right moment. That gap is what Accentuate is built around.</p>
-      <h2>The Concept</h2>
-      <p>Accentuate is a SaaS platform for language learning built on a single premise: the best learning experience isn't AI or human — it's both, working together. AI handles the heavy lifting: real-time grammar analysis, error detection, and pattern recognition across sessions, powered by Qwen-Max LLM and served via Alibaba Cloud's global CDN. But human tutors sit inside the feedback layer, reviewing, refining, and adding context that the model alone can't generate.</p>
-      <p>This creates a product category that doesn't really exist yet — faster than booking a tutor, deeper than any app.</p>
 
-      <!-- INLINE IMAGE: dashboard overview — add when available -->
+      <h2>The Concept</h2>
+      <p>Accentuate is a SaaS platform for language learning built on a single premise: the best learning experience isn't AI or human. It's both, working together. AI handles the heavy lifting: real-time grammar analysis, error detection, and pattern recognition across sessions, powered by Qwen-Max LLM and served via Alibaba Cloud's global CDN. But human tutors sit inside the feedback layer, reviewing, refining, and adding context that the model alone can't generate.</p>
+      <p>This creates a product category that doesn't really exist yet: faster than booking a tutor, deeper than any app.</p>
+      <p>The workflow is intentionally simple from the learner's side: upload a recording, receive a structured report. Under the hood: audio passes through Faster-Whisper for transcription, then Qwen-Max for analysis, then outputs a learner report with every grammar error mapped to an explicit rule, then a pathway to improve. The complexity is invisible. That's the point.</p>
+
+      <figure class="post-img">
+        <img src="../../assets/images/Accentuate%20-%202.png" alt="Accentuate dashboard overview" width="2400" height="1600" loading="lazy" decoding="async">
+      </figure>
+
+      <h2>How It Works</h2>
+      <p>The AI pipeline runs a two-pass design. The first pass estimates the learner's CEFR proficiency level, explicitly instructing the model to ignore fillers, false starts, and casual contractions. This matters: fluency quirks and grammatical errors are different things, and conflating them produces feedback that feels unfair. The second pass scopes the grammar knowledge base to rules within one CEFR level of the learner's estimated proficiency, so the feedback is both accessible and appropriately challenging.</p>
+      <p>Every error in the report follows a strict schema: error type, the specific grammar rule it violates, a pedagogical category, the learner's exact phrasing as the example, the corrected form, and an explanation. No vague corrections. Each flag is auditable and traceable to a rule. That level of explainability was a design requirement as much as an engineering one — if a learner can't understand why something was flagged, they won't trust the product.</p>
+      <p>The backend runs fully serverless on Alibaba Cloud: Function Compute hosts the Flask service, Object Storage Service manages audio and report files, and presigned STS URLs handle all client interactions so audio never requires public exposure. The architecture scales transparently with usage and needs no server maintenance.</p>
+
+      <figure class="post-img">
+        <img src="../../assets/images/Accentuate%20-%20BE.png" alt="Accentuate backend architecture" width="2400" height="1600" loading="lazy" decoding="async">
+      </figure>
 
       <h2>The Design Challenges</h2>
       <p>Three problems dominated the design process.</p>
-      <p><strong>Transparency without noise.</strong> Users needed to understand at a glance when they were receiving AI feedback versus human feedback. Getting that distinction wrong would erode trust in both. The solution was a clear signal layer — visual indicators that communicate the feedback source without cluttering the interface.</p>
-      <p><strong>Progress that feels real.</strong> Language progress is non-linear and genuinely difficult to measure. A streak doesn't mean you're improving. Designing a stats system that reflects genuine skill growth — not just activity — required deciding which metrics actually matter to a learner trying to hold a conversation in six months.</p>
+      <p><strong>Transparency without noise.</strong> Users needed to understand at a glance when they were receiving AI feedback versus human feedback. Getting that distinction wrong would erode trust in both. The solution was a clear signal layer: visual indicators that communicate the feedback source without cluttering the interface.</p>
+      <p><strong>Progress that feels real.</strong> Language progress is non-linear and genuinely difficult to measure. A streak doesn't mean you're improving. Designing a stats system that reflects genuine skill growth, not just activity, required deciding which metrics actually matter to a learner trying to hold a conversation in six months.</p>
       <p><strong>A dashboard that serves two users.</strong> Learners and tutors both live inside the same product but need entirely different views of it. Building both surfaces required a clear information architecture that kept the roles distinct without fragmenting the experience.</p>
 
-      <!-- INLINE IMAGE: practice session / feedback UI — add when available -->
+      <figure class="post-img">
+        <img src="../../assets/images/Accentuate%20-%203.png" alt="Accentuate practice session and feedback UI" width="2400" height="1600" loading="lazy" decoding="async">
+      </figure>
 
-      <h2>Key Features</h2>
-      <p>The platform shipped with eight core features across three layers: the learning surface (live practice sessions, tailored assessments, progress tracking), the feedback layer (AI analysis plus human-proofed corrections), and the infrastructure (mobile-responsive, Alibaba Cloud CDN, SEO-optimised content).</p>
-      <p>The dashboard is a grid-style board that surfaces all active and past sessions at a glance — the kind of view that makes returning users feel oriented instantly, which is the hardest thing to get right in a learning product.</p>
+      <h2>The Product</h2>
+      <p>Six core features ship in the current version:</p>
+      <p><strong>Dashboard Overview.</strong> A grid-style board surfacing all active and past sessions at a glance. The kind of view that makes returning users feel oriented instantly — which is the hardest thing to get right in a learning product.</p>
+      <p><strong>My Sessions.</strong> Create and manage practice sessions with support for both live conversation and pre-recorded file upload. The two modes serve different learner contexts without fragmenting the experience.</p>
+      <p><strong>Tutor Correction UI.</strong> The core differentiator. Human tutors can highlight errors, edit AI-generated reports, and add context the model can't generate. The interface is built so the human layer enhances the AI output rather than replacing it entirely.</p>
+      <p><strong>My Progress.</strong> A detailed analytics view with personalised priorities, error patterns across sessions, and improvement tracking over time. The goal was to make non-linear progress feel visible and meaningful.</p>
+      <p><strong>Tailored Assessments.</strong> Adaptive tests aligned to the learner's level and goals, generated from the same grammar knowledge base used in the analysis pipeline.</p>
+      <p><strong>AI Analysis.</strong> Real-time Qwen-Max output on every session, with optional human-proofed corrections layered on top. The design keeps both sources clearly attributed.</p>
 
-      <!-- INLINE IMAGE: scalability architecture or feature grid — add when available -->
+      <figure class="post-img">
+        <img src="../../assets/images/Accentuate%20-%20UX%20Flow.png" alt="Accentuate user experience flow" width="2400" height="1600" loading="lazy" decoding="async">
+      </figure>
+
+      <figure class="post-img">
+        <img src="../../assets/images/Accentuate%20-%204.png" alt="Accentuate feature overview" width="2400" height="1600" loading="lazy" decoding="async">
+      </figure>
+
+      <h2>The Numbers</h2>
+      <p>We tested transcription against the L2-ARCTIC corpus: twenty-four non-native English speakers across different accents. Word error rate came in at around 7% in the serverless environment. That's competitive for accented speech, and it held up on internal Zoom recordings with real hesitations and overlaps — not just scripted read speech.</p>
+      <p>On the analysis side, over 95% of flagged grammar mistakes mapped to an explicit rule from the knowledge base. Human raters validated the corrections. Cost per report stabilised at around 15 cents under the pay-as-you-go model.</p>
+      <p>Those numbers mattered less as engineering benchmarks and more as design inputs. If transcription accuracy drops, trust breaks. If corrections feel arbitrary, users stop acting on them. The metrics were a proxy for a design question: does this feel like it's actually working?</p>
 
       <h2>What I Learned</h2>
       <p>AI products are interface design problems as much as they are engineering problems. The model is table stakes. The design is what determines whether users trust it, return to it, and genuinely improve because of it.</p>
       <p>Accentuate pushed me into territory I hadn't worked in before: designing around machine-generated content, handling ambiguous feedback loops, and treating trust as a first-class design dimension rather than an afterthought. The challenge of making a user feel confident that the feedback they just received is worth acting on turned out to be one of the most interesting UX problems I've encountered.</p>
       <p>The platform is live at <a href="https://accentuate-five.vercel.app" target="_blank" rel="noopener">accentuate-five.vercel.app</a>. There's more to build.</p>
-      <p><em>Tools used: Figma · Vercel · Qwen-Max LLM · Alibaba Cloud Skills: SaaS UX · AI product design · Dashboard design · Information architecture · Responsive design</em></p>
+      <p><em>Built at the Alibaba Cloud Hackathon 2025 with Aaron Ngoi, Flora Wang, and Behzad Ansarinejad. Tools: Figma · Vercel · Qwen-Max LLM · Alibaba Cloud · Faster-Whisper · Skills: SaaS UX · AI product design · Dashboard design · Information architecture</em></p>
+
+      <figure class="post-img">
+        <img src="../../assets/images/Accentuate%20-%205.png" alt="Accentuate platform screens" width="2400" height="1600" loading="lazy" decoding="async">
+      </figure>
       </div>
       <dl class="facts">
         <div><dt>date published</dt><dd>19 Nov 2026</dd></div>
-        <div><dt>reading time</dt><dd>5 min read</dd></div>
+        <div><dt>reading time</dt><dd>7 min read</dd></div>
       </dl>
     </article>
 
