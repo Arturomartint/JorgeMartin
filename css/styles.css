@@ -326,6 +326,7 @@ a:hover > .icon { background: #fff; }
 
 /* 9. Latest work ---------------------------------------------------------- */
 .work-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 44px; }
+.work-grid li:last-child:nth-child(3n+1) { grid-column: 2; }
 
 /* 10. About --------------------------------------------------------------- */
 .lead {

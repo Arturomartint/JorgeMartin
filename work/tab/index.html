@@ -1,0 +1,240 @@
+<!doctype html>
+<html lang="en-AU">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>TAB Pick&amp;Win: Free-to-Play Predictor Design · Jorge Martin</title>
+  <meta name="description" content="Designing TAB Pick&amp;Win — a free-to-play sports prediction platform built exclusively for TAB's existing customer base, with rolling lockout, responsive web, and a full design system.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://jorgemartin.design/work/tab/">
+  <link rel="sitemap" type="application/xml" href="/sitemap.xml">
+
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://jorgemartin.design/work/tab/">
+  <meta property="og:title" content="TAB Pick&amp;Win: Free-to-Play Predictor Design · Jorge Martin">
+  <meta property="og:description" content="Designing TAB Pick&amp;Win — a free-to-play sports prediction platform built exclusively for TAB's existing customer base, with rolling lockout, responsive web, and a full design system.">
+  <meta property="og:image" content="https://jorgemartin.design/assets/images/TAB/Tab%20Predictor%20High%20Fidelity%205.webp">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="TAB Pick&amp;Win: Free-to-Play Predictor Design · Jorge Martin">
+  <meta name="twitter:description" content="Designing TAB Pick&amp;Win — a free-to-play sports prediction platform built exclusively for TAB's existing customer base, with rolling lockout, responsive web, and a full design system.">
+  <link rel="icon" type="image/svg+xml" href="../../assets/icons/logo.svg">
+  <link rel="apple-touch-icon" href="../../assets/images/C7DCQwpNZEM6WE1IkG9xE67PM9Q.png">
+
+  <link rel="preload" href="../../assets/fonts/Inter-Variable.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="../../css/styles.css">
+  <script src="../../js/main.js" defer></script>
+  <script async src="https://jorge-analytics.vercel.app/script.js" data-website-id="9f52d72f-e380-44fd-848e-cafb26524d08"></script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"CreativeWork","name":"TAB Pick&Win","url":"https://jorgemartin.design/work/tab/","creator":{"@type":"Person","name":"Jorge Martin"},"image":"https://jorgemartin.design/assets/images/TAB/Tab%20Predictor%20High%20Fidelity%205.webp","description":"Free-to-play sports prediction platform for TAB's existing customer base, with rolling lockout mechanics and a full design system."}</script>
+</head>
+<body>
+
+  <!-- ===== Header ===== -->
+  <header class="site-header">
+    <div class="site-header__inner">
+      <a class="brand" href="../../">
+        <img src="../../assets/icons/logo-mark.svg" alt="" width="35" height="35">
+        <span>Jorge Martin</span>
+      </a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">Menu</button>
+      <nav class="nav" id="site-nav" aria-label="Main">
+        <a href="../../latest-work/" aria-current="page">Latest Work</a>
+        <a href="../../about/">About</a>
+        <a href="../../playground/">Playground</a>
+        <a href="../../contact/">Contact</a>
+      </nav>
+      <span class="site-header__progress" aria-hidden="true"></span>
+    </div>
+  </header>
+
+  <main class="page" style="--accent: #f9d100; --tile: rgb(50, 42, 8)">
+    <h1 class="page-title aim">TAB Pick&amp;Win</h1>
+
+    <!-- ===== Overview ===== -->
+    <section class="case-section">
+      <div class="prose">
+      <h2>Overview</h2>
+      <p>TAB Pick&amp;Win is a free-to-play sports prediction game built exclusively for TAB's existing customer base. Rather than competing in the crowded mass-market prediction space, it was designed as a retention and engagement tool: an invitation-only product that gave existing TAB users a compelling reason to stay in the ecosystem beyond live betting.</p>
+      <p>The mechanic is built around rolling lockout: fans can adjust their selections all the way up to game kickoff, then selections lock. Weekly winners receive betting credit; the best performers over the full season compete for major prizes. The game is invitation-only, accessible via unique access codes sent to TAB's existing database.</p>
+      <h3>The Problem</h3>
+      <p>TAB had an engaged customer base, but engagement was largely transactional: users arrived to place a bet, then left. The challenge was to design a product that created a habit loop independent of live betting activity, keeping users invested in the platform between events and throughout a full season.</p>
+      <p>The design had to feel genuinely game-like rather than grafted onto a wagering product. It also had to work for a broad audience of sports fans: AFL, NRL, horse racing, and greyhounds, within a single cohesive system.</p>
+      <h3>My Role</h3>
+      <p>As Senior Product Designer, I owned the end-to-end design of the platform:</p>
+      <ul>
+        <li>Designed the full responsive web experience: landing pages, contests, predictions interface, leaderboard, and results views</li>
+        <li>Built the UI kit and design system documentation in Figma</li>
+        <li>Created detailed component specifications for engineering handoff</li>
+        <li>Designed white and dark mode as full-system variations from a single component library</li>
+        <li>Delivered mobile web optimised views for all core surfaces</li>
+        <li>Covered multiple sport formats: AFL, NRL, horse racing, greyhounds, and special events</li>
+      </ul>
+      <figure>
+        <img src="../../assets/images/TAB/Tab%20Predictor%20High%20Fidelity%205.webp" alt="TAB Pick&amp;Win high fidelity desktop UI" width="4938" height="2778" loading="lazy" decoding="async">
+        <figcaption>TAB Pick&amp;Win — High Fidelity Desktop</figcaption>
+      </figure>
+      </div>
+      <dl class="facts">
+        <div><dt>Role</dt><dd>Senior Product Designer</dd></div>
+        <div><dt>Timeline</dt><dd>2023</dd></div>
+        <div><dt>Platforms</dt><dd>Responsive Web</dd></div>
+        <div><dt>Company</dt><dd>TAB · Genius Sports</dd></div>
+      </dl>
+    </section>
+
+    <!-- ===== Design ===== -->
+    <section class="case-section case-section--flip">
+      <div class="prose">
+      <h2>Design Approach</h2>
+      <h3>Prediction states and rolling lockout</h3>
+      <p>The core design challenge was building a prediction interface where the state of every selection changes dynamically as kickoff approaches. The UI had to communicate clearly across a card: which games are open and adjustable, which are approaching lock, and which are locked. Getting this right across dozens of simultaneous game rows required a systematic approach to state design, not just visual styling.</p>
+      <p>The rolling lockout mechanic is what makes Pick&amp;Win different from a standard prediction game. Users can keep refining right up to kickoff, which means the product needs to feel alive and responsive throughout a week, not just on the day predictions are due. The design reflected that: state transitions were clear, non-anxious, and always communicated what a user could still do rather than what they'd missed.</p>
+      <figure>
+        <img src="../../assets/images/TAB/TAB%20Predictor%20Horizontal.webp" alt="TAB Pick&amp;Win predictor interface horizontal layout" width="2880" height="2048" loading="lazy" decoding="async">
+        <figcaption>TAB Pick&amp;Win — Predictor Interface</figcaption>
+      </figure>
+      <h3>Responsive and mobile-first</h3>
+      <p>The majority of TAB users access the product on mobile. Every surface was designed mobile-first, with the desktop experience built on the same foundation rather than treated as a separate design. The prediction card in particular went through multiple iterations to work at both touch scale and cursor scale without sacrificing the information density the game required.</p>
+      <p>The mobile web experience covered the full product: landing and onboarding, the active contest view, individual pick cards, the leaderboard, and results. Each surface was optimised for thumb reach and fast scanning, particularly important for a prediction product users open during live sport.</p>
+      <figure>
+        <img src="../../assets/images/TAB/Tab%20Predictor%20High%20Fidelity%20Mweb%201.webp" alt="TAB Pick&amp;Win mobile web high fidelity designs" width="4938" height="2778" loading="lazy" decoding="async">
+        <figcaption>TAB Pick&amp;Win — Mobile Web, High Fidelity</figcaption>
+      </figure>
+      <h2>The Design System</h2>
+      <p>Building a reusable design system was a core deliverable. TAB Pick&amp;Win needed to operate across multiple sport formats and event types (AFL, NRL, horse racing, greyhounds, special events) within a single component library that could flex to each context without fragmentation.</p>
+      <p>The system was built in Figma and covered:</p>
+      <ul>
+        <li><strong>Full UI kit</strong> across all interactive states: default, active, locked, loading, empty, and error</li>
+        <li><strong>Prediction card components</strong> with variants for single-sport and multi-sport formats</li>
+        <li><strong>Leaderboard and scoring components</strong> designed for real-time update states</li>
+        <li><strong>Navigation and global UI patterns</strong> consistent across all surfaces</li>
+        <li><strong>White and dark mode</strong> as first-class system variants, not an afterthought</li>
+      </ul>
+      <figure>
+        <img src="../../assets/images/TAB/Tab%20Predictor%20UI%20Kit.webp" alt="TAB Pick&amp;Win UI kit in Figma" width="9860" height="5219" loading="lazy" decoding="async">
+        <figcaption>TAB Pick&amp;Win — UI Kit</figcaption>
+      </figure>
+      <figure>
+        <img src="../../assets/images/TAB/Tab%20Predictor%20Design%20System%201.webp" alt="TAB Pick&amp;Win design system documentation" width="9860" height="5195" loading="lazy" decoding="async">
+        <figcaption>TAB Pick&amp;Win — Design System</figcaption>
+      </figure>
+      <figure>
+        <img src="../../assets/images/TAB/Tab%20Predictor%20Design%20System%202.webp" alt="TAB Pick&amp;Win design system tokens and patterns" width="9860" height="5128" loading="lazy" decoding="async">
+        <figcaption>TAB Pick&amp;Win — Design System, Continued</figcaption>
+      </figure>
+      <h2>Component Specifications</h2>
+      <p>Detailed component specs were delivered alongside the design system as part of the engineering handoff. Each component was documented with explicit measurements, spacing values, interaction states, and behaviour notes. The goal was to reduce interpretation during implementation: every question the engineering team might have about a component had an answer in the spec before they needed to ask it.</p>
+      <figure>
+        <img src="../../assets/images/TAB/Tab%20Predictor%20Component%20Specs.webp" alt="TAB Pick&amp;Win component specifications for engineering" width="9860" height="5219" loading="lazy" decoding="async">
+        <figcaption>TAB Pick&amp;Win — Component Specifications</figcaption>
+      </figure>
+      <h2>White &amp; Dark Mode</h2>
+      <p>Both modes were designed as full-system variations from the outset, not retrofitted after the fact. The design used a semantic token layer so that switching modes was a single variable swap across the entire system. No hardcoded colours anywhere in the component library. The result was two polished, fully deployable product treatments: a clean white mode optimised for daytime and a dark mode suited to evening sports viewing, both produced from one consistent component library.</p>
+      <figure>
+        <img src="../../assets/images/TAB/Tab%20Predictor%20White%20%26%20Black%20Mode.webp" alt="TAB Pick&amp;Win white and dark mode design comparison" width="9860" height="5219" loading="lazy" decoding="async">
+        <figcaption>TAB Pick&amp;Win — White &amp; Dark Mode</figcaption>
+      </figure>
+      <h2>What I Learned</h2>
+      <p>This was a project where the brief was precise but the design space was wide. TAB users are experienced sports fans: they know what a prediction product should feel like. Meeting that expectation while introducing a fresh visual language was the central tension.</p>
+      <p>The answer was discipline. A systematic approach to component design, state handling, and information architecture made the product feel both familiar and distinctive. The design system wasn't just an efficiency tool: it was what held the experience together as it scaled across sports, formats, and modes.</p>
+      <p>Building white and dark mode from a single component library reinforced something that applies to every complex product: tokens and semantic colour systems aren't overhead. They're what makes scale possible without quality decay.</p>
+      </div>
+      <dl class="facts">
+        <div><dt>Categories</dt><dd>Free to Play · Gamification · Design Systems · Responsive Web</dd></div>
+        <div><dt>Deliverables</dt><dd>UI Kit · Design System · Component Specs · White &amp; Dark Mode · Mobile Web</dd></div>
+        <div><dt>Sports covered</dt><dd>AFL · NRL · Horse Racing · Greyhounds · Special Events</dd></div>
+        <div><dt>Design outcome</dt><dd>End-to-end responsive platform with dual-mode design system</dd></div>
+      </dl>
+    </section>
+
+    <!-- ===== Gallery ===== -->
+    <div class="gallery">
+      <figure class="gallery__item">
+        <p class="gallery__num">01</p>
+        <img src="../../assets/images/TAB/Tab%20Predictor%20High%20Fidelity%20Mweb%201.webp" alt="TAB Pick&amp;Win mobile web — predictions view" width="4938" height="2778" loading="lazy" decoding="async">
+        <figcaption>TAB Pick&amp;Win — Mobile Web 01</figcaption>
+      </figure>
+      <figure class="gallery__item">
+        <p class="gallery__num">02</p>
+        <img src="../../assets/images/TAB/Tab%20Predictor%20High%20Fidelity%20Mweb%202.webp" alt="TAB Pick&amp;Win mobile web — contest view" width="4938" height="2778" loading="lazy" decoding="async">
+        <figcaption>TAB Pick&amp;Win — Mobile Web 02</figcaption>
+      </figure>
+      <figure class="gallery__item">
+        <p class="gallery__num">03</p>
+        <img src="../../assets/images/TAB/Tab%20Predictor%20High%20Fidelity%20Mweb%203.webp" alt="TAB Pick&amp;Win mobile web — leaderboard" width="4938" height="2778" loading="lazy" decoding="async">
+        <figcaption>TAB Pick&amp;Win — Mobile Web 03</figcaption>
+      </figure>
+      <figure class="gallery__item">
+        <p class="gallery__num">04</p>
+        <img src="../../assets/images/TAB/Tab%20Predictor%20High%20Fidelity%20Mweb%204.webp" alt="TAB Pick&amp;Win mobile web — results and scoring" width="4938" height="2778" loading="lazy" decoding="async">
+        <figcaption>TAB Pick&amp;Win — Mobile Web 04</figcaption>
+      </figure>
+    </div>
+
+    <!-- ===== See also ===== -->
+    <section class="see-also">
+      <h2 class="tagline">see also</h2>
+      <a class="see-also__item" href="../afl-fantasy/" style="--tile: rgba(40, 92, 112, 0.9)">
+        <span class="see-also__thumb"><video aria-label="AFL Compare players" src="../../assets/video/HXZXJ4z4XxqkjkL4GKg1h5PMgY.mp4" autoplay muted loop playsinline preload="metadata"></video></span>
+        <span class="see-also__text">
+          <span class="see-also__tag">Design systems</span><br>
+          <span class="see-also__title">AFL Fantasy</span>
+        </span>
+        <svg class="see-also__arrow" viewBox="0 0 256 256" aria-hidden="true"><path d="M200,64V168a8,8,0,0,1-16,0V83.31L69.66,197.66a8,8,0,0,1-11.32-11.32L172.69,72H88a8,8,0,0,1,0-16H192A8,8,0,0,1,200,64Z"/></svg>
+      </a>
+      <a class="see-also__item" href="../fifa-playzone/" style="--tile: rgb(69, 102, 99)">
+        <span class="see-also__thumb"><video aria-label="FIFA Play Zone screens" src="../../assets/video/0EO7nZF94YOSjuAi0yG7AePBRM.mp4" autoplay muted loop playsinline preload="metadata"></video></span>
+        <span class="see-also__text">
+          <span class="see-also__tag">Gamification</span><br>
+          <span class="see-also__title">FIFA Play Zone</span>
+        </span>
+        <svg class="see-also__arrow" viewBox="0 0 256 256" aria-hidden="true"><path d="M200,64V168a8,8,0,0,1-16,0V83.31L69.66,197.66a8,8,0,0,1-11.32-11.32L172.69,72H88a8,8,0,0,1,0-16H192A8,8,0,0,1,200,64Z"/></svg>
+      </a>
+    </section>
+
+    <!-- ===== Call to action ===== -->
+    <section class="cta">
+      <div>
+        <h2>Let's <em class="serif">Create Together</em></h2>
+        <p class="cta__tag">Reach out anytime</p>
+      </div>
+      <div class="cta__action aim">
+        <a class="btn" href="../../contact/">
+          <span>Contact me</span>
+          <svg viewBox="0 0 256 256" aria-hidden="true"><path d="M200,64V168a8,8,0,0,1-16,0V83.31L69.66,197.66a8,8,0,0,1-11.32-11.32L172.69,72H88a8,8,0,0,1,0-16H192A8,8,0,0,1,200,64Z"/></svg>
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <!-- ===== Footer ===== -->
+  <footer class="site-footer">
+    <div class="site-footer__row">
+      <div class="footer-col">
+        <a class="brand" href="../../">
+          <img src="../../assets/icons/logo-mark.svg" alt="" width="35" height="35">
+          <span>Jorge Martin</span>
+        </a>
+        <div class="footer-contact">
+          <a href="mailto:jorgemartindesigns@gmail.com">jorgemartindesigns@gmail.com</a>
+          <a href="tel:+61480149343">0480 149 343</a>
+        </div>
+      </div>
+      <nav class="nav" aria-label="Footer">
+        <a href="../../latest-work/">Latest Work</a>
+        <a href="../../about/">About</a>
+        <a href="../../playground/">Playground</a>
+        <a href="../../contact/">Contact</a>
+      </nav>
+      <div class="socials">
+        <a href="https://www.linkedin.com/in/jorgemartin21/" target="_blank" rel="noopener" aria-label="LinkedIn"><span class="icon icon--linkedin"></span></a>
+        <a href="https://dribbble.com/arturomartin" target="_blank" rel="noopener" aria-label="Dribbble"><span class="icon icon--dribbble"></span></a>
+        <a href="https://medium.com/@arturomartin1" target="_blank" rel="noopener" aria-label="Medium"><span class="icon icon--medium"></span></a>
+      </div>
+    </div>
+    <div class="site-footer__legal">
+      <p>Jorge Martin © 2026 All rights reserved</p>
+      <p>We proudly acknowledge the First Peoples of Victoria as the Traditional Owners and custodians of the land, waters and skies on which we live and work</p>
+    </div>
+  </footer>
+</body>
+</html>
