@@ -1,0 +1,149 @@
+<!doctype html>
+<html lang="en-AU">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Accentuate: Designing a Human-in-the-Loop Language Platform · Jorge Martin</title>
+  <meta name="description" content="A SaaS case study on bridging AI-powered analysis and human tutoring — designing for trust, habit, and language fluency.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://jorgemartin.design/playground/accentuate">
+  <link rel="sitemap" type="application/xml" href="/sitemap.xml">
+
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://jorgemartin.design/playground/accentuate">
+  <meta property="og:title" content="Accentuate: Designing a Human-in-the-Loop Language Platform · Jorge Martin">
+  <meta property="og:description" content="A SaaS case study on bridging AI-powered analysis and human tutoring — designing for trust, habit, and language fluency.">
+  <meta property="og:image" content="https://jorgemartin.design/assets/images/8nMAh98vYJTyyHjet23OdGMbZYU.webp">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Accentuate: Designing a Human-in-the-Loop Language Platform · Jorge Martin">
+  <meta name="twitter:description" content="A SaaS case study on bridging AI-powered analysis and human tutoring — designing for trust, habit, and language fluency.">
+  <link rel="icon" type="image/svg+xml" href="../../assets/icons/logo.svg">
+  <link rel="apple-touch-icon" href="../../assets/images/C7DCQwpNZEM6WE1IkG9xE67PM9Q.png">
+
+  <link rel="preload" href="../../assets/fonts/Inter-Variable.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="../../css/styles.css">
+  <script src="../../js/main.js" defer></script>
+  <script async src="https://jorge-analytics.vercel.app/script.js" data-website-id="9f52d72f-e380-44fd-848e-cafb26524d08"></script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","headline":"Accentuate: Designing a Human-in-the-Loop Language Platform","url":"https://jorgemartin.design/playground/accentuate","datePublished":"2026-11-19","author":{"@type":"Person","name":"Jorge Martin","url":"https://jorgemartin.design/"},"publisher":{"@type":"Person","name":"Jorge Martin"}}</script>
+</head>
+<body>
+
+  <!-- ===== Header ===== -->
+  <header class="site-header">
+    <div class="site-header__inner">
+      <a class="brand" href="../../">
+        <img src="../../assets/icons/logo-mark.svg" alt="" width="35" height="35">
+        <span>Jorge Martin</span>
+      </a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">Menu</button>
+      <nav class="nav" id="site-nav" aria-label="Main">
+        <a href="../../latest-work/">Latest Work</a>
+        <a href="../../about/">About</a>
+        <a href="../../playground/" aria-current="page">Playground</a>
+        <a href="../../contact/">Contact</a>
+      </nav>
+      <span class="site-header__progress" aria-hidden="true"></span>
+    </div>
+  </header>
+
+  <main class="page" style="--accent: #c4a7ff">
+    <h1 class="page-title aim">Accentuate</h1>
+
+    <!-- HERO IMAGE: replace src with actual image path when available -->
+    <figure class="post-hero">
+      <img src="" alt="" width="2400" height="1600" loading="lazy" decoding="async">
+    </figure>
+
+    <article class="article">
+      <div class="prose">
+      <h2>What Building a Language App in the Age of AI Actually Taught Me</h2>
+      <p>Most language apps follow the same loop: input, AI response, gamified reward. It works for a few weeks. The streak keeps you coming back. But the feedback is generic, the corrections feel automated, and somewhere around week six you realise you're completing exercises without actually improving.</p>
+      <p>The fundamental flaw is that AI alone can't give you what a good tutor can: contextual, personalised, trust-based feedback delivered at the right moment. That gap is what Accentuate is built around.</p>
+      <h2>The Concept</h2>
+      <p>Accentuate is a SaaS platform for language learning built on a single premise: the best learning experience isn't AI or human — it's both, working together. AI handles the heavy lifting: real-time grammar analysis, error detection, and pattern recognition across sessions, powered by Qwen-Max LLM and served via Alibaba Cloud's global CDN. But human tutors sit inside the feedback layer, reviewing, refining, and adding context that the model alone can't generate.</p>
+      <p>This creates a product category that doesn't really exist yet — faster than booking a tutor, deeper than any app.</p>
+
+      <!-- INLINE IMAGE: dashboard overview — add when available -->
+
+      <h2>The Design Challenges</h2>
+      <p>Three problems dominated the design process.</p>
+      <p><strong>Transparency without noise.</strong> Users needed to understand at a glance when they were receiving AI feedback versus human feedback. Getting that distinction wrong would erode trust in both. The solution was a clear signal layer — visual indicators that communicate the feedback source without cluttering the interface.</p>
+      <p><strong>Progress that feels real.</strong> Language progress is non-linear and genuinely difficult to measure. A streak doesn't mean you're improving. Designing a stats system that reflects genuine skill growth — not just activity — required deciding which metrics actually matter to a learner trying to hold a conversation in six months.</p>
+      <p><strong>A dashboard that serves two users.</strong> Learners and tutors both live inside the same product but need entirely different views of it. Building both surfaces required a clear information architecture that kept the roles distinct without fragmenting the experience.</p>
+
+      <!-- INLINE IMAGE: practice session / feedback UI — add when available -->
+
+      <h2>Key Features</h2>
+      <p>The platform shipped with eight core features across three layers: the learning surface (live practice sessions, tailored assessments, progress tracking), the feedback layer (AI analysis plus human-proofed corrections), and the infrastructure (mobile-responsive, Alibaba Cloud CDN, SEO-optimised content).</p>
+      <p>The dashboard is a grid-style board that surfaces all active and past sessions at a glance — the kind of view that makes returning users feel oriented instantly, which is the hardest thing to get right in a learning product.</p>
+
+      <!-- INLINE IMAGE: scalability architecture or feature grid — add when available -->
+
+      <h2>What I Learned</h2>
+      <p>AI products are interface design problems as much as they are engineering problems. The model is table stakes. The design is what determines whether users trust it, return to it, and genuinely improve because of it.</p>
+      <p>Accentuate pushed me into territory I hadn't worked in before: designing around machine-generated content, handling ambiguous feedback loops, and treating trust as a first-class design dimension rather than an afterthought. The challenge of making a user feel confident that the feedback they just received is worth acting on turned out to be one of the most interesting UX problems I've encountered.</p>
+      <p>The platform is live at <a href="https://accentuate-five.vercel.app" target="_blank" rel="noopener">accentuate-five.vercel.app</a>. There's more to build.</p>
+      <p><em>Tools used: Figma · Vercel · Qwen-Max LLM · Alibaba Cloud Skills: SaaS UX · AI product design · Dashboard design · Information architecture · Responsive design</em></p>
+      </div>
+      <dl class="facts">
+        <div><dt>date published</dt><dd>19 Nov 2026</dd></div>
+        <div><dt>reading time</dt><dd>5 min read</dd></div>
+      </dl>
+    </article>
+
+    <!-- ===== See also ===== -->
+    <section class="see-also">
+      <h2 class="tagline">.see also</h2>
+      <a class="post-next" href="../mayaxp/">
+        <span class="post-title">Maya XP: Spatial UX Design for Mayan Heritage</span>
+        <svg viewBox="0 0 256 256" aria-hidden="true"><path d="M200,64V168a8,8,0,0,1-16,0V83.31L69.66,197.66a8,8,0,0,1-11.32-11.32L172.69,72H88a8,8,0,0,1,0-16H192A8,8,0,0,1,200,64Z"/></svg>
+      </a>
+    </section>
+
+    <!-- ===== Call to action ===== -->
+    <section class="cta">
+      <div>
+        <h2>Let's <em class="serif">Create Together</em></h2>
+        <p class="cta__tag">Reach out anytime</p>
+      </div>
+      <div class="cta__action aim">
+        <a class="btn" href="../../contact/">
+          <span>Contact me</span>
+          <svg viewBox="0 0 256 256" aria-hidden="true"><path d="M200,64V168a8,8,0,0,1-16,0V83.31L69.66,197.66a8,8,0,0,1-11.32-11.32L172.69,72H88a8,8,0,0,1,0-16H192A8,8,0,0,1,200,64Z"/></svg>
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <!-- ===== Footer ===== -->
+  <footer class="site-footer">
+    <div class="site-footer__row">
+      <div class="footer-col">
+        <a class="brand" href="../../">
+          <img src="../../assets/icons/logo-mark.svg" alt="" width="35" height="35">
+          <span>Jorge Martin</span>
+        </a>
+        <div class="footer-contact">
+          <a href="mailto:jorgemartindesigns@gmail.com">jorgemartindesigns@gmail.com</a>
+          <a href="tel:+61480149343">0480 149 343</a>
+        </div>
+      </div>
+      <nav class="nav" aria-label="Footer">
+        <a href="../../latest-work/">Latest Work</a>
+        <a href="../../about/">About</a>
+        <a href="../../playground/">Playground</a>
+        <a href="../../contact/">Contact</a>
+      </nav>
+      <div class="socials">
+        <a href="https://www.linkedin.com/in/jorgemartin21/" target="_blank" rel="noopener" aria-label="LinkedIn"><span class="icon icon--linkedin"></span></a>
+        <a href="https://dribbble.com/arturomartin" target="_blank" rel="noopener" aria-label="Dribbble"><span class="icon icon--dribbble"></span></a>
+        <a href="https://medium.com/@arturomartin1" target="_blank" rel="noopener" aria-label="Medium"><span class="icon icon--medium"></span></a>
+      </div>
+    </div>
+    <div class="site-footer__legal">
+      <p>Jorge Martin © 2026 All rights reserved</p>
+      <p>We proudly acknowledge the First Peoples of Victoria as the Traditional Owners and custodians of the land, waters and skies on which we live and work</p>
+    </div>
+  </footer>
+</body>
+</html>
