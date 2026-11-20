@@ -570,7 +570,6 @@ figcaption { margin-top: 8px; font-size: 13px; line-height: 1.2; font-style: ita
   }
   .brand span { display: none; }
   .brand img { width: 22px; height: 22px; }
-  .nav-toggle { display: none; }
   .site-header .nav {
     display: flex; flex-direction: row; align-items: center; gap: 4px;
   }
