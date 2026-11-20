@@ -364,9 +364,11 @@ main.page:has(.page-hero) .page-title { font-size: clamp(44px, 5vw, 72px); }
 .award { grid-template-columns: 450px 450px 1fr; }
 .award h3 { font-size: 32px; line-height: 1.75; font-weight: 400; letter-spacing: -0.3px; }
 .award__title { max-width: 300px; }
+.award__year { font-size: 32px; line-height: 1.75; font-weight: 400; letter-spacing: -0.3px; }
 .award p, .cert p { color: var(--text-2); }
 .cert { grid-template-columns: 257px 600px 1fr; padding-bottom: 44px; }
 .cert h3 { font-size: 22px; line-height: 1.4; font-weight: 400; letter-spacing: 0; }
+.cert__date { font-size: 22px; line-height: 1.4; font-weight: 400; letter-spacing: 0; }
 
 /* 11. Blog ---------------------------------------------------------------- */
 .post-feature { display: grid; grid-template-columns: 3fr 1fr; gap: 16px 0; }
@@ -614,8 +616,8 @@ figcaption { margin-top: 8px; font-size: 13px; line-height: 1.2; font-style: ita
   .tool { gap: 16px; }
   .tool img { width: 56px; height: 56px; }
   .award, .cert { grid-template-columns: 1fr; row-gap: 4px; padding-bottom: 24px; }
-  .award h3 { font-size: 24px; }
-  .cert h3 { font-size: 18px; }
+  .award h3, .award__year { font-size: 24px; }
+  .cert h3, .cert__date { font-size: 18px; }
 
   .post-feature { grid-template-columns: 1fr; }
   .post-feature .tagline { padding-left: 0; order: -1; }
@@ -655,8 +657,23 @@ figcaption { margin-top: 8px; font-size: 13px; line-height: 1.2; font-style: ita
   .site-footer__legal { text-align: left; padding: 12px 0 0; }
 }
 
+/* === Skeleton loading ===================================================== */
+@keyframes skeleton-shimmer { to { background-position: 200% 0; } }
+
+.skel img, .skel video { opacity: 0; transition: opacity 0.4s ease; }
+.skel.loaded img, .skel.loaded video { opacity: 1; }
+
+/* Full shimmer for containers where media covers the full area */
+.project-card.skel {
+  background-image: linear-gradient(90deg, #161616 25%, #232323 50%, #161616 75%);
+  background-size: 200% 100%;
+  animation: skeleton-shimmer 1.5s linear infinite;
+}
+.project-card.skel.loaded { background-image: none; animation: none; }
+
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
   .clients__track, .hero__scroll svg { animation: none; }
+  .project-card.skel { animation: none; }
   * { transition: none !important; }
 }

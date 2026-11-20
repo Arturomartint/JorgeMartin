@@ -45,7 +45,23 @@ if (loops.length && 'IntersectionObserver' in window) {
   loops.forEach((v) => vo.observe(v));
 }
 
-// 5. Contact form: send to Formspree without leaving the page.
+// 5. Skeleton loading: fade media in once it has loaded
+(function () {
+  var sel = 'figure, .project-card, .post-feature, .post-row, .see-also__thumb, .gallery__item';
+  document.querySelectorAll(sel).forEach(function (el) {
+    var media = el.querySelector('img, video');
+    if (!media) return;
+    el.classList.add('skel');
+    var done = function () { el.classList.add('loaded'); };
+    var ready = media.tagName === 'IMG' ? media.complete : media.readyState >= 1;
+    if (ready) { done(); return; }
+    var evt = media.tagName === 'VIDEO' ? 'loadedmetadata' : 'load';
+    media.addEventListener(evt, done, { once: true });
+    media.addEventListener('error', done, { once: true });
+  });
+}());
+
+// 6. Contact form: send to Formspree without leaving the page.
 //    Without JavaScript the form still works, it just lands on Formspree's own thank-you page.
 const form = document.querySelector('[data-contact-form]');
 if (form) {
