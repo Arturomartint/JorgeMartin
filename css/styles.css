@@ -385,6 +385,8 @@ a:hover .post-title { color: #fff; }
 /* 12. Contact ------------------------------------------------------------- */
 .contact-intro { max-width: 900px; margin: 0 auto; font-size: clamp(22px, 2.3vw, 32px); line-height: 1.75; font-weight: 400; letter-spacing: -0.3px; }
 .contact-grid { display: flex; justify-content: space-between; align-items: flex-start; gap: 60px; }
+.contact-main-col { display: flex; flex-direction: column; gap: 32px; flex: 0 1 632px; min-width: 0; }
+.contact-main-col > .form-card { flex: none; width: 100%; }
 .form-card {
   position: relative; overflow: hidden;
   flex: 0 1 632px; display: flex; flex-direction: column; gap: 20px; padding: 32px;
@@ -505,6 +507,10 @@ figcaption { margin-top: 8px; font-size: 13px; line-height: 1.2; font-style: ita
 /* Reveal on scroll (only active when js/main.js has run) */
 .has-reveal [data-reveal] { opacity: 0; transform: translateY(40px); transition: opacity 0.7s ease, transform 0.7s ease; }
 .has-reveal [data-reveal].is-visible { opacity: 1; transform: none; }
+
+/* Word-by-word scroll reveal */
+.scroll-word { opacity: 0.2; transition: opacity 0.3s ease; }
+.scroll-word.is-lit { opacity: 1; }
 
 /* 14. Responsive ---------------------------------------------------------- */
 /* Tablet */
@@ -637,6 +643,7 @@ figcaption { margin-top: 8px; font-size: 13px; line-height: 1.2; font-style: ita
   .post-next svg { width: 32px; height: 32px; }
 
   .contact-grid { flex-direction: column; }
+  .contact-main-col { flex: none; width: 100%; }
   .form-card { flex: none; width: 100%; padding: 20px; }
   .social-list { flex: none; gap: 28px; }
 

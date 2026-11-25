@@ -12,7 +12,17 @@ if (progress) {
   update();
 }
 
-// 2. Mobile menu
+// 2. Hero scroll-down button — scroll without changing the URL (prevents analytics tracking it as a new page)
+const heroScroll = document.querySelector('.hero__scroll');
+if (heroScroll) {
+  heroScroll.addEventListener('click', (e) => {
+    e.preventDefault();
+    const target = document.querySelector(heroScroll.getAttribute('href'));
+    if (target) target.scrollIntoView({ behavior: 'smooth' });
+  });
+}
+
+// 3. Mobile menu
 const toggle = document.querySelector('.nav-toggle');
 const nav = document.getElementById('site-nav');
 if (toggle && nav) {
@@ -23,7 +33,7 @@ if (toggle && nav) {
   });
 }
 
-// 3. Fade sections in as they enter the viewport
+// 4. Fade sections in as they enter the viewport
 const reveal = document.querySelectorAll('[data-reveal]');
 if (reveal.length && 'IntersectionObserver' in window &&
     !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
@@ -36,7 +46,7 @@ if (reveal.length && 'IntersectionObserver' in window &&
   reveal.forEach((el) => io.observe(el));
 }
 
-// 4. Only play looping videos while they are on screen (saves battery and data)
+// 5. Only play looping videos while they are on screen (saves battery and data)
 const loops = document.querySelectorAll('video[loop]');
 if (loops.length && 'IntersectionObserver' in window) {
   const vo = new IntersectionObserver((entries) => {
@@ -45,7 +55,7 @@ if (loops.length && 'IntersectionObserver' in window) {
   loops.forEach((v) => vo.observe(v));
 }
 
-// 5. Skeleton loading: fade media in once it has loaded
+// 6. Skeleton loading: fade media in once it has loaded
 (function () {
   var sel = 'figure, .project-card, .post-feature, .post-row, .see-also__thumb, .gallery__item';
   document.querySelectorAll(sel).forEach(function (el) {
@@ -61,7 +71,7 @@ if (loops.length && 'IntersectionObserver' in window) {
   });
 }());
 
-// 6. Contact form: send to Formspree without leaving the page.
+// 7. Contact form: send to Formspree without leaving the page.
 //    Without JavaScript the form still works, it just lands on Formspree's own thank-you page.
 const form = document.querySelector('[data-contact-form]');
 if (form) {
@@ -102,4 +112,45 @@ if (form) {
       button.disabled = false;
     }
   });
+}
+
+// 8. Word-by-word scroll reveal (opacity 0.2 → 1 as words pass the 65% viewport threshold)
+const revealEls = document.querySelectorAll('[data-scroll-reveal]');
+if (revealEls.length && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+  revealEls.forEach(el => {
+    const frag = document.createDocumentFragment();
+    el.childNodes.forEach(node => {
+      if (node.nodeType === Node.TEXT_NODE) {
+        node.textContent.split(/(\s+)/).forEach(part => {
+          if (/^\s+$/.test(part)) {
+            frag.appendChild(document.createTextNode(part));
+          } else if (part.length) {
+            const s = document.createElement('span');
+            s.className = 'scroll-word';
+            s.textContent = part;
+            frag.appendChild(s);
+          }
+        });
+      } else if (node.nodeType === Node.ELEMENT_NODE) {
+        const s = document.createElement('span');
+        s.className = 'scroll-word';
+        s.appendChild(node.cloneNode(true));
+        frag.appendChild(s);
+      }
+    });
+    el.innerHTML = '';
+    el.appendChild(frag);
+  });
+
+  const scrollWords = document.querySelectorAll('.scroll-word');
+  let ticking = false;
+  const updateWords = () => {
+    const thresh = window.innerHeight * 0.65;
+    scrollWords.forEach(w => w.classList.toggle('is-lit', w.getBoundingClientRect().top < thresh));
+    ticking = false;
+  };
+  window.addEventListener('scroll', () => {
+    if (!ticking) { requestAnimationFrame(updateWords); ticking = true; }
+  }, { passive: true });
+  updateWords();
 }
